@@ -1,0 +1,98 @@
+<% layout('layout/boilerplate') %>
+
+    <div id="edit">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="outer">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h1>編輯</h1>
+                            <form action="/animals/<%= animal._id %>?_method=PUT" method="post" novalidate
+                                class="validated" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label class="form-label" for="title">標題</label>
+                                    <input class="form-control" type="text" name="title" id="title"
+                                        value="<%= animal.title %>" required>
+                                    <div class="invalid-feedback">
+                                        請輸入標題
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="dangerous">危險度</label>
+                                    <input class="form-control" type="number" max="100" name="dangerous" id="dangerous"
+                                        value="<%= animal.dangerous %>" required>
+                                    <div class="invalid-feedback">
+                                        請輸入0~100間的數字
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="location">拍攝地點</label>
+                                    <input class="form-control" type="text" name="location" id="location"
+                                        value="<%= animal.location %>" required>
+                                    <div class="invalid-feedback">
+                                        請輸入拍攝地點
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="image" class="form-label">圖片</label>
+                                    <input class="form-control" type="file" name="image" id="image" multiple>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="description">描述</label>
+                                    <textarea class="form-control description" name="description" id="description"
+                                        required><%= animal.description %></textarea>
+                                    <div class="invalid-feedback">
+                                        請輸入內容文字
+                                    </div>
+                                </div>
+                                <h6> 刪除圖片 </h6>
+                                <div class="row row-cols-1 row-cols-md-4 g-4 mb-3 delImg">
+                                    <% animal.image.forEach((img, i)=> { %>
+                                        <div class="col">
+                                            <div class="card">
+                                                <img class="card-img" src="<%= img.thumbnail %>" alt="">
+                                                <div class="card-img-overlay text-end pt-1 pe-2">
+                                                    <label class="visually-hidden" for="delImages<%= i %>">Delete
+                                                        Image</label>
+                                                    <input class="form-check-input" type="checkbox" name="delImages[]"
+                                                        value="<%= img.filename %>" id="delImages<%= i %>">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% }) %>
+                                </div>
+                                <div class="buttonBlock">
+                                    <button class="btn btn-success">保存</button>
+                                    <a class="btn" href="/animals/<%= animal._id %>">回上一頁</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const imgArray = [
+            "https://wallpapercave.com/wp/8HB34Wh.jpg",
+            "https://www.wallpapertip.com/wmimgs/84-844941_wildlife-backgrounds.jpg",
+            "https://eskipaper.com/images/wild-deer-wallpaper-1.jpg",
+            "https://thumbs.dreamstime.com/b/wildlife-birds-wildlife-birds-lots-seagulls-hovering-over-stormy-sea-sunset-107087509.jpg",
+            "https://c4.wallpaperflare.com/wallpaper/578/412/853/ocean-hd-1080p-high-quality-wallpaper-preview.jpg",
+            "https://c0.wallpaperflare.com/preview/203/746/336/turtle-sea-underwater-ocean.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922982/backImg/backImg_11_l5oyuf.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922980/backImg/backImg_9_j76yk9.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922978/backImg/backImg_1_ylm8yq.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922978/backImg/backImg_3_jwn6sc.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922978/backImg/backImg_4_eii1px.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_5_fl7erm.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_2_sakh9b.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_13_yrsjrz.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_12_wedost.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_8_xg0qnz.jpg",
+            "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_10_rmpg4u.jpg",
+        ];
+        const n = Math.floor(Math.random() * imgArray.length);
+        document.querySelector('#edit').style.backgroundImage = `url(${imgArray[n]})`;
+    </script>

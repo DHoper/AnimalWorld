@@ -1,0 +1,133 @@
+<% layout('layout/boilerplate') %>
+<link rel="stylesheet" href="/css/stars.css">
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
+
+<div class="row" id="detail">
+    <div class="col-6 col-l">
+        <div id="aniamlCarousel" class="carousel slide" data-bs-ride="carousel">
+            <% if(animal.image.length > 1) {%> 
+            <div class="carousel-indicators">
+              <% for(let i = 0; i < animal.image.length; i++) { %> 
+              <button type="button" data-bs-target="#aniamlCarousel" data-bs-slide-to="<%= i %> " class="active"></button>
+              <% }%>
+            </div>
+            <%  }%> 
+
+            <div class="carousel-inner">
+              <% for(let i = 0; i < animal.image.length; i++) {%> 
+              <div class="carousel-item <%= i ===0? "active": "" %>">
+                <img src="<%= animal.image[i].url %>" class="d-block w-100" alt="...">
+              </div>
+              <% }%> 
+            </div>
+
+            <% if(animal.image.length > 1) {%> 
+            <button class="carousel-control-prev" type="button" data-bs-target="#aniamlCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aniamlCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <%  }%> 
+          </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <%= animal.title %>
+                </h3>
+                <p class="card-text">
+                    <%= animal.description %>
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-danger">危險度&nbsp;:&nbsp;&nbsp;<%= animal.dangerous %> / 100
+                </li>
+                <li class="list-group-item text-muted">
+                    <%= animal.location %>
+                </li>
+            </ul>
+            <% if(currentUser && animal.author.equals(currentUser._id)) {%>
+                <div class="card-body">
+                    <a href="/animals/<%= animal._id %>/edit" class="btn btn-success card-link">編輯</a>
+                    <form class="d-inline" action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger ms-3">刪除</button>
+                    </form>
+                    <a href="/animals" class="btn btn-primary card-link float-end">回上一頁</a>
+                </div>
+                <% }%>
+                    <div class="card-footer ">
+                        <p>
+                            <span class="fw-bold"><%= animal.author.nickname %></span>(<span class="text-secondary"><%= animal.author.username %></span> )&nbsp; 發佈,
+                            <span class="text-muted ms-3"><%= animal.date %></span>
+                        </p>  
+                    </div>
+        </div>
+    </div>
+    <div class="col-6 col-r">
+        <div id='map'></div>
+            <form action="/animals/<%= animal._id %>/reviews" method="POST" class="validated reviewForm" novalidate >
+                <div class="reviewInput">
+                    <textarea class="text" name="content" id="content" cols="30" rows="3"
+                    maxlength="60" required></textarea>
+                 
+                </div>
+                <div class=" reviewBottom">
+                    <div class="l-container">
+                        <span>評論</span>
+                        <fieldset class="starability-basic">
+                            <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="1" checked aria-label="No rating." />
+                            <input type="radio" id="first-rate1" name="rating" value="1" checked/>
+                            <label for="first-rate1" title="Terrible">1 star</label>
+                            <input type="radio" id="first-rate2" name="rating" value="2" />
+                            <label for="first-rate2" title="Not good">2 stars</label>
+                            <input type="radio" id="first-rate3" name="rating" value="3" />
+                            <label for="first-rate3" title="Average">3 stars</label>
+                            <input type="radio" id="first-rate4" name="rating" value="4" />
+                            <label for="first-rate4" title="Very good">4 stars</label>
+                            <input type="radio" id="first-rate5" name="rating" value="5" />
+                            <label for="first-rate5" title="Amazing">5 stars</label>
+                          </fieldset>
+                    </div>
+                    <button class="btn">提&nbsp;&nbsp;交</button>
+                </div> 
+            </form>
+            <div class="reviews">
+                <% for(let review of animal.reviews) { %>
+                    <div class="review">
+                        <div class="reviewTitle">
+                            <p class="starability-result" data-rating="<%= review.rating %>">
+                                Rated: <%= review.rating %> stars </p>
+                            <p class="username">
+                                <span class="fw-bold"><%= animal.author.nickname %></span>(<span><%= animal.author.username %></span> )
+                            </p>
+                            <p class="text-muted" ><%= review.date %></p>
+                        </div>
+                        <p class="reviewContent">
+                            <%= review.content %>
+                        </p>
+                        <form action="/animals/<%= animal._id %>/reviews/<%= review._id %>?_method=DELETE"
+                            method="POST">
+                            <% if(currentUser && review.author.equals(currentUser._id)) {%>
+                                <button class="btn-sm btn-danger"><span>刪&nbsp;&nbsp;&nbsp;&nbsp;除</span></button>
+                            <% }%>
+                        </form>
+                    </div>
+                <% } %>
+            </div>    
+    </div>
+</div>
+
+
+<script>
+    const mapToken = '<%- process.env.MAPBOX_TOKEN%>';//傳遞至JS檔用途
+    let animalDeliver = '<%- JSON.stringify(animal) %>';//為避免報錯故先字串化
+
+    const reviews = document.querySelector('.reviews');
+    let reviewH = document.querySelector('.review').clientHeight;
+    reviews.style.height = `calc(${reviewH*4}px + 2.5rem`;
+</script>
+
+<script src="/JS/detailMap.js"></script>

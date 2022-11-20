@@ -1,0 +1,36 @@
+<% layout('layout/boilerplate') %>
+<style>
+    .popcard {
+        max-width: 50vw !important;
+    }
+    .mapboxgl-popup-tip {
+        border: solid 1rem transparent;
+        border-top-color: rgba(146, 146, 146, 0.842) !important;
+        border-bottom-color: #fff !important;
+        z-index: 0;
+    }
+    .mapboxgl-popup-content {
+        border: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+</style>
+
+<div id="index">
+    <div id="map" class="indexMap"></div>
+</div>
+
+<script>
+    let mapToken = null;
+    let geoData = null;
+    (async function getData() {
+        mapToken ='<%- process.env.MAPBOX_TOKEN%>';//傳遞至JS檔用途
+        let animals = await '<%-JSON.stringify(animals)%>';
+        geoData = await { features: JSON.parse(animals) };//為避免報錯，加入字串引號後再進行JSON解析
+        await geoData;
+    })(); 
+
+</script>
+
+<script src="/JS/mapCluster.js"></script>
+

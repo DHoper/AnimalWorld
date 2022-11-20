@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+    user-scalable=no;"/>
+    <title>Animal World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/css/app.css">
+
+    <style>
+        .mapboxgl-popup-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5rem;
+            border: .1rem solid #50AE2D;
+            border-top: .2rem solid #50AE2D;
+            border-bottom: .05rem solid #50AE2D;
+        }
+        a {
+            text-decoration: none;
+        }
+        p {
+            margin: 0;
+        }
+        .mapboxgl-popup-close-button:focus-visible {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <%- include('../partials/navbar') %>
+
+        <main class="container-fluid" id="main">
+            <%- include('../partials/flash') %>
+                <%- body %>
+        </main>
+
+        <%- include('../partials/footer') %>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+            integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+            integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+            crossorigin="anonymous"></script>
+
+        <script src="/JS/validater.js"></script>
+</body>
+
+
+</html>

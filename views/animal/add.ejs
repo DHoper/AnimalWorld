@@ -1,0 +1,78 @@
+<% layout('layout/boilerplate') %>
+
+    <div id="add">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row">
+                <div class="outer">
+                    <div class="card shadow">
+                        <img src="https://wallpapercave.com/wp/8HB34Wh.jpg" alt="" class="card-img-top" />
+                        <div class="card-body">
+                            <form action="/animals" method="POST" novalidate class="validated"
+                                enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label class="form-label" for="title">標題</label>
+                                    <input class="form-control" type="text" name="title" id="title" required>
+                                    <div class="invalid-feedback">
+                                        請輸入標題
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="dangerous">危險度</label>
+                                    <input class="form-control" type="number" min="0" max="100" name="dangerous"
+                                        id="dangerous" required>
+                                    <div class="invalid-feedback">
+                                        請輸入0~100間的數字
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="location">拍攝地點</label>
+                                    <input class="form-control" type="text" name="location" id="location" required>
+                                    <div class="invalid-feedback">
+                                        請輸入拍攝地點
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="image" class="form-label">圖片</label>
+                                    <input class="form-control" type="file" name="image" id="image" multiple required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="description">描述</label>
+                                    <textarea class="form-control description" name="description" id="description"
+                                        placeholder="請輸入內容文字" required></textarea>
+                                    <div class="invalid-feedback">
+                                        請輸入內容文字
+                                    </div>
+                                </div>
+                                <button class="btn">上傳</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const imgArray = [
+            "https://wallpapercave.com/wp/8HB34Wh.jpg",
+            "https://www.wallpapertip.com/wmimgs/84-844941_wildlife-backgrounds.jpg",
+            "https://eskipaper.com/images/wild-deer-wallpaper-1.jpg",
+            "https://thumbs.dreamstime.com/b/wildlife-birds-wildlife-birds-lots-seagulls-hovering-over-stormy-sea-sunset-107087509.jpg",
+            "https://c4.wallpaperflare.com/wallpaper/578/412/853/ocean-hd-1080p-high-quality-wallpaper-preview.jpg",
+            "https://c0.wallpaperflare.com/preview/203/746/336/turtle-sea-underwater-ocean.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922982/backImg/backImg_11_l5oyuf.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922980/backImg/backImg_9_j76yk9.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922978/backImg/backImg_1_ylm8yq.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922978/backImg/backImg_3_jwn6sc.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922978/backImg/backImg_4_eii1px.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_5_fl7erm.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_2_sakh9b.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_13_yrsjrz.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_12_wedost.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_8_xg0qnz.jpg",
+           "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_10_rmpg4u.jpg",
+        ];
+        const n = Math.floor(Math.random() * imgArray.length);
+        document.querySelector('#add').style.backgroundImage = `url(${imgArray[n]})`;
+        document.querySelector('.card-img-top').src = imgArray[n];
+    </script>

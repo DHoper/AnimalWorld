@@ -1,0 +1,94 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(84, 83, 83, 0.5), rgba(84, 83, 83, 0.5)), url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80");
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.cover-container {
+  max-width: 60vw;
+}
+.cover-container header {
+  margin-top: 2rem;
+}
+.cover-container header h3 {
+  font-size: 3rem;
+}
+.cover-container header nav {
+  font-size: 1.5rem;
+}
+.cover-container header nav a {
+  margin: 0.5rem 1.5rem;
+}
+
+.btnStart {
+  margin-top: 0.5rem;
+}
+
+.nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.714);
+  margin-left: 1rem;
+  border-bottom: 0.25rem solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: white;
+  border-bottom-color: white;
+  transform: scale(1.1);
+}
+
+.nav-link:active {
+  color: white;
+  border-bottom-color: white;
+  transform: scale(1.1);
+}
+
+.nav-link:focus {
+  color: white;
+}
+
+.btn-secondary {
+  text-shadow: none;
+  color: black;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(60, 174, 70, 0.481) !important;
+  text-shadow: none;
+}
+
+@media only screen and (min-width: 0px) {
+  html {
+    font-size: 4px !important;
+  }
+}
+@media only screen and (min-width: 401px) {
+  html {
+    font-size: 6px !important;
+  }
+}
+@media only screen and (min-width: 428px) {
+  html {
+    font-size: 6px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 8px !important;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  html {
+    font-size: 13px !important;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 16px !important;
+  }
+}/*# sourceMappingURL=home.css.map */

@@ -18,7 +18,7 @@ const animalsRoute = require('./routes/animals');
 const reviewsRoute = require('./routes/reviews');
 const usersRoute = require('./routes/users');
 const mongoStore = require('connect-mongo');
-const dbUrl = 'mongodb+srv://dhoper777:apollo777@animalworld.2cjhxfg.mongodb.net/?retryWrites=true&w=majority' || 'mongodb://127.0.0.1:27017/animal-world';
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/animal-world';
 
 const mongoose = require('mongoose');
 async function main() {

@@ -22,11 +22,7 @@ const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/animal-world';
 
 const mongoose = require('mongoose');
 async function main() {
-<<<<<<< Updated upstream
     await mongoose.connect(dbUrl, { useUnifiedTopology: true });
-=======
-    await mongoose.connect(dbUrl, {useUnifiedTopology: true});
->>>>>>> Stashed changes
 }
 
 main().then(solved => console.log(solved, "success!!!"))

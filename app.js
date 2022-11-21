@@ -22,10 +22,10 @@ const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/animal-world';
 
 const mongoose = require('mongoose');
 async function main() {
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(dbUrl, { useUnifiedTopology: true });
 }
 main().then(solved => console.log(solved, "success!!!"))
-    .catch(err => console.log(err));
+    .catch(err => console.log("777",err));
 
 const secret = process.env.SECRET || "777";
 const store = mongoStore.create({

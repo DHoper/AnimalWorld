@@ -54,7 +54,23 @@
             crossorigin="anonymous"></script>
 
         <script src="/JS/validater.js"></script>
+
+        <!-- <script>
+            const navs = document.querySelectorAll('#navbar a');
+            let activedNav = null;
+            navs.forEach((item, index) => {
+                console.log(111);
+                item.addEventListener('click', () => {
+                    console.log(444);
+                    if(activedNav) {
+                        navs[activedNav].classList.remove('active');
+                    }
+                    console.log(index);
+                    activedNav = index;
+                    item.classList.add('active');
+                    console.log(777);
+                })
+            })
+        </script> -->
 </body>
-
-
 </html>

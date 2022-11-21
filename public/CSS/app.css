@@ -309,9 +309,9 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 0.1rem 0.1rem 0.1rem 0rem;
-  border-right: 1px solid rgba(82, 174, 120, 0.5960784314);
-  border-left: 2px solid rgba(82, 174, 120, 0.5960784314);
+  border-right: 1px solid rgba(96, 170, 127, 0.5960784314);
   background-color: #F7FFF7;
   color: #208AAE;
 }
@@ -489,6 +489,21 @@ body::-webkit-scrollbar {
   background-color: rgba(30, 74, 163, 0.662);
   border-color: rgba(195, 199, 206, 0.49);
   color: #fff;
+}
+
+#navbar {
+  padding: 1rem;
+}
+#navbar .nav-L > a {
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+#navbar .nav-L > a:focus {
+  transform: scale(1.1);
+}
+#navbar .nav-L > a.active {
+  transform: scale(1.3);
+  margin-left: 1rem;
 }
 
 #error {

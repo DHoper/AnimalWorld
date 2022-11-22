@@ -40,7 +40,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="description">描述</label>
                                     <textarea class="form-control description" name="description" id="description"
-                                        required><%= animal.description %></textarea>
+                                    maxlength="200" required><%= animal.description %></textarea>
                                     <div class="invalid-feedback">
                                         請輸入內容文字
                                     </div>
@@ -94,5 +94,5 @@
             "https://res.cloudinary.com/dzfgxmkid/image/upload/v1668922977/backImg/backImg_10_rmpg4u.jpg",
         ];
         const n = Math.floor(Math.random() * imgArray.length);
-        document.querySelector('#edit').style.backgroundImage = `url(${imgArray[n]})`;
+        document.querySelector('#edit').style.backgroundImage = `linear-gradient(rgb(177 174 174 / 38%), rgb(176 177 174 / 17%)),url(${imgArray[n]})`;
     </script>

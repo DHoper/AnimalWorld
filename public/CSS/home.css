@@ -190,13 +190,13 @@ main .btn-secondary:hover {
     transform: rotate(-90deg);
     stroke: #fff;
     stroke-width: 0.1563rem;
+    opacity: 1;
   }
   30% {
     stroke-dashoffset: 0;
     stroke-dasharray: 183;
     transform: rotate(-90deg) scale(1);
     cursor: pointer;
-    opacity: 1;
     stroke-width: 0.1563rem;
   }
   90%, 99% {
@@ -218,13 +218,13 @@ main .btn-secondary:hover {
     transform: rotate(-90deg);
     stroke: #fff;
     stroke-width: 0.1563rem;
+    opacity: 1;
   }
   30% {
     stroke-dashoffset: 0;
     stroke-dasharray: 183;
     transform: rotate(-90deg) scale(1);
     cursor: pointer;
-    opacity: 1;
     stroke-width: 0.1563rem;
   }
   90%, 99% {

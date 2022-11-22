@@ -23,19 +23,6 @@ body::-webkit-scrollbar {
           animation: alert 0s ease-in-out 2s forwards;
 }
 
-@-webkit-keyframes alert {
-  100% {
-    z-index: -1;
-    visibility: hidden;
-  }
-}
-
-@keyframes alert {
-  100% {
-    z-index: -1;
-    visibility: hidden;
-  }
-}
 #index .indexMap {
   position: absolute;
   top: 0;
@@ -106,6 +93,12 @@ body::-webkit-scrollbar {
 #index .indexMap .card .outer .content .card-body a:focus {
   box-shadow: none;
   background-color: #0d6efd;
+}
+
+#wall .banner {
+  background-color: rgba(220, 217, 217, 0.668);
+  width: 100vw;
+  height: 65vh;
 }
 
 #login {
@@ -522,6 +515,19 @@ body::-webkit-scrollbar {
   height: 70%;
 }
 
+@-webkit-keyframes alert {
+  100% {
+    z-index: -1;
+    visibility: hidden;
+  }
+}
+
+@keyframes alert {
+  100% {
+    z-index: -1;
+    visibility: hidden;
+  }
+}
 @media only screen and (min-width: 340px) {
   html {
     font-size: 4px !important;

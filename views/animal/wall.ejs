@@ -1,0 +1,21 @@
+<% layout('layout/boilerplate') %>
+
+<div id="wall">
+    <div class="banner">
+        pending
+    </div>
+    <div class="row">
+      <% for(animal of animals) {%>
+        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
+      <% }%>  
+      <% for(animal of animals) {%>
+        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
+      <% }%>  
+      <% for(animal of animals) {%>
+        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
+      <% }%> 
+      <% for(animal of animals) {%>
+        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
+      <% }%> 
+    </div>
+</div>

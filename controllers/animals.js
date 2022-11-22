@@ -10,6 +10,11 @@ module.exports.index = async (req, res) => {
     res.render('animal/index', { animals });
 }
 
+module.exports.wall = async (req, res) => {
+    const animals = await Animal.find({}).populate('author');
+    res.render('animal/wall', { animals });
+}
+
 module.exports.detail = async (req, res) => {
     const { id } = req.params;
     const animal = await Animal.findById(id).populate({

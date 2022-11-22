@@ -13,6 +13,9 @@ router.route('/')
     .get(catchAsync(animalsCtr.index))
     .post(loginValidator, upload.array('image'), validateAnimal, catchAsync(animalsCtr.addPost));
 
+
+router.get('/wall', animalsCtr.wall);
+
 router.get('/add', loginValidator, animalsCtr.add);
 
 router.route('/:id')

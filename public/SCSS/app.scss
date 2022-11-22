@@ -23,15 +23,6 @@ body::-webkit-scrollbar {
     animation: alert 0s ease-in-out 2s forwards;
 }
 
-@keyframes alert {
-    0% {}
-
-    100% {
-        z-index: -1;
-        visibility: hidden;
-    }
-}
-
 #index {
 
     .indexMap {
@@ -123,6 +114,13 @@ body::-webkit-scrollbar {
     }
 }
 
+#wall {
+    .banner {
+        background-color: rgba(220, 217, 217, 0.668);
+        width: 100vw;
+        height: 65vh;
+    }
+}
 
 #login {
     display: flex;
@@ -490,7 +488,6 @@ body::-webkit-scrollbar {
    
 }
 
-
 #edit {
     display: flex;
     justify-content: center;
@@ -621,6 +618,19 @@ body::-webkit-scrollbar {
     }
 }
 
+
+//--------------------------------------------------------------------//
+
+@keyframes alert {
+    0% {}
+
+    100% {
+        z-index: -1;
+        visibility: hidden;
+    }
+}
+
+//--------------------------------------------------------------------//
 
 @media only screen and (min-width: 340px) {
     html {

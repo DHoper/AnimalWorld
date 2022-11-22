@@ -8,16 +8,18 @@ const ejsmate = require('ejs-mate');
 const morgan = require('morgan');
 const session = require('express-session');
 const flash = require('connect-flash');
+
+const ExpressError = require('./utils/expressError.js');
+const mongoStore = require('connect-mongo');
+
 const path = require('path');
 const app = express();
 const passport = require('passport');
 const LocalPassport = require('passport-local');
 const User = require('./models/user');
-const ExpressError = require('./utils/expressError.js');
 const animalsRoute = require('./routes/animals');
 const reviewsRoute = require('./routes/reviews');
 const usersRoute = require('./routes/users');
-const mongoStore = require('connect-mongo');
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/animal-world';
 
 const mongoose = require('mongoose');
@@ -28,16 +30,13 @@ async function main() {
 main().then(solved => console.log(solved, "success!!!"))
     .catch(err => console.log("777",err));
 
-const secret = process.env.SECRET || "777";
-const store = mongoStore.create({
+const secret = process.env.SECRET || "777";  //構建session//
+const store = mongoStore.create({ 
     mongoUrl: dbUrl,
     secret,
     touchAfter: 24 * 60 * 60
 });
 
-store.on("error", function(e) {
-    console.log("777");
-})
 
 const sessionConfig = {
     secret,
@@ -81,11 +80,11 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get('/fakeUser',async (req, res, next) => {
-    const user = new User({email : "33", username : "11"});
-    const newUser = await User.register(user, "12");
-    res.send(newUser);
-})
+// app.get('/fakeUser',async (req, res, next) => {
+//     const user = new User({email : "33", username : "11"});
+//     const newUser = await User.register(user, "12");
+//     res.send(newUser);
+// })
 
 app.use('/', usersRoute);
 app.use('/animals', animalsRoute);

@@ -358,6 +358,7 @@ body::-webkit-scrollbar {
   margin: 0;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 2rem;
 }
 #add .row {
@@ -493,6 +494,9 @@ body::-webkit-scrollbar {
 
 #navbar {
   padding: 1rem;
+}
+#navbar .logo {
+  width: 3rem;
 }
 #navbar .nav-L > a {
   font-size: 1.2rem;

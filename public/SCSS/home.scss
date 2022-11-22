@@ -22,51 +22,205 @@ body {
       font-size: 1.5rem;
 
       a {
-        margin: .5rem 1.5rem;
+        margin: .5rem 2.5rem;
       }
+    }
+
+    .nav-link {
+      padding: 0.25rem 0;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.714);
+      border-bottom: 0.25rem solid transparent;
+      transition: all .5s ease-in-out;
+    }
+    
+    .nav-link:hover {
+      color: white;
+      border-bottom-color: white;
+      transform: scale(1.2);
+    }
+    
+    .nav-link:active {
+      color: white;
+      border-bottom-color: white;
+      transform: scale(1.2);
+    }
+    
+    .nav-link:focus {
+      color: white;
     }
   }
 }
 
-.btnStart {
-  margin-top: .5rem;
+main {
+  margin-top: -10rem;
+
+  .textAni {
+    animation: text .6s ease-in-out .4s forwards;
+  }
+
+
+  .frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin-top: 4rem;
+  
+    input {
+      display: none;
+  
+      &:checked {
+        & ~ .button {
+          animation: button 1s ease both;
+  
+          img {
+            animation: icon 2.8s ease forwards .9s;
+          }
+        }
+  
+        & ~ .circle {
+          animation: circle 01s ease forwards .8s;
+        }
+      }
+    }
+    .button {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 45%;
+      height: 3.45rem;
+      border: #fff solid 2.5px;
+      color: #fff;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+      border-radius: 18.75rem;
+      cursor: pointer;
+  
+      &:hover {
+        background: #37be77;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      img {
+        width: 20rem;
+        position: absolute;
+        top: -15rem;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  
+    .circle {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 0.1563rem;
+      stroke-linecap: round;
+      stroke-dasharray: 183;
+      stroke-dashoffset: 183;
+      cursor: pointer;
+    }
+  }
+  
+  .btn-secondary {
+    text-shadow: none;
+    color: black;
+    transition: all .8s ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(60, 174, 70, 0.481) !important;
+    transform: scale(1.2);
+    text-shadow: none;
+  }
 }
 
-.nav-link {
-  padding: 0.25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.714);
-  margin-left: 1rem;
-  border-bottom: 0.25rem solid transparent;
-  transition: all .2s ease-in-out;
+
+@keyframes text {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+
 }
 
-.nav-link:hover {
-  color: white;
-  border-bottom-color: white;
-  transform: scale(1.1);
+@keyframes button {
+	0% {
+		width: 45%;
+		border-color: #fff;
+		color: #fff;
+    font-size: 1.5rem;
+	}
+  33%{
+    font-size: 1.5rem;
+  }
+	34% {
+    font-size: 0rem;
+		color: transparent;
+	}
+	100% {
+		width: 3.5rem;
+		border-color: transparent;
+		background: transparent;
+		color: transparent;
+    font-size: 0rem;
+	}
 }
 
-.nav-link:active {
-
-  color: white;
-  border-bottom-color: white;
-  transform: scale(1.1);
+@keyframes circle {
+	0% {
+		stroke-dashoffset: 183;
+		transform: rotate(-90deg);
+		stroke: #fff;
+    stroke-width: 0.1563rem;
+	}
+	30% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 183;
+		transform: rotate(-90deg) scale(1);
+		cursor: pointer;
+		opacity: 1;
+    stroke-width: 0.1563rem;
+	}
+	90%,
+	99% {
+		transform: rotate(-90deg) scale(13);
+		stroke-dasharray: 1500;
+		opacity: 0;
+		z-index: unset;
+	}
+	100% {
+		transform: rotate(-90deg) scale(14);
+		stroke-dasharray: 1500;
+		opacity: 0;
+		z-index: -1;
+	}
+}
+@keyframes icon {
+	0% {
+		opacity: 0;
+    transform: scale(.8);
+	}
+  62% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+	100% {
+		opacity: .6;
+    transform: scale(1.1);
+	}
 }
 
-.nav-link:focus {
-  color: white;
-}
-
-.btn-secondary {
-  text-shadow: none;
-  color: black;
-}
-
-.btn-secondary:hover {
-  background-color: rgba(60, 174, 70, 0.481) !important;
-  text-shadow: none;
-}
+//------------------------------------------------------//
 
 @media only screen and (min-width: 0px) {
   html {

@@ -36,6 +36,6 @@ module.exports.logout = (req, res) => {
     req.logout(function (err) {
         if (err) { return next(err); }
         req.flash('success', "成功登出!");
-        res.redirect('/animals');
+        res.redirect('/');
     });
 }

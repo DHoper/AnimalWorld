@@ -54,5 +54,16 @@
             crossorigin="anonymous"></script>
 
         <script src="/JS/validater.js"></script>
+        <script>
+            const nav = Array.from(document.querySelector('.nav-L').children);
+            nav.forEach((item, index) => {
+                if(item.baseURI == item.href) {
+                    item.classList.add('active');
+                }else {
+                    item.classList.remove('active');
+                }
+            })
+            console.log(nav);
+        </script>
 </body>
 </html>

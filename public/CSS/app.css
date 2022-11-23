@@ -103,13 +103,17 @@ body::-webkit-scrollbar {
 #wall {
   display: flex;
   height: 93.5vh;
+  background-color: rgba(211, 208, 208, 0.907);
+}
+#wall ::-webkit-scrollbar {
+  display: none;
 }
 #wall .banner {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180rem;
+  width: 35vw;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -140,9 +144,9 @@ body::-webkit-scrollbar {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  width: 65vw;
   max-height: 95vh;
   overflow-y: scroll;
-  background-color: rgba(57, 54, 54, 0.737254902);
   margin-left: 0rem;
 }
 #wall .row .photoBlock {
@@ -195,7 +199,7 @@ body::-webkit-scrollbar {
 #wall .row .photoBlock .text .detail {
   position: absolute;
   bottom: 5%;
-  left: 5%;
+  left: 7%;
   color: #fff;
   font-size: 1rem;
   margin-bottom: 5rem;
@@ -215,15 +219,15 @@ body::-webkit-scrollbar {
 }
 #wall .row .photoBlock .text .button {
   position: absolute;
-  bottom: 1.25rem;
-  left: 5%;
+  bottom: 0.5rem;
+  left: 7%;
   width: 100%;
   font-size: 1.25rem;
   color: #fff;
 }
 #wall .row .photoBlock .text .arrow {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0rem;
   right: 5%;
   width: 4.5rem;
   height: 3.5rem;
@@ -667,11 +671,15 @@ body::-webkit-scrollbar {
 #navbar .nav-L > a {
   font-size: 1.2rem;
   margin-right: 2rem;
+  transition: all 0.7s ease;
+}
+#navbar .nav-L > a:hover {
+  color: #fff;
 }
 #navbar .nav-L > a:focus {
   transform: scale(1.1);
 }
-#navbar .nav-L > a.active {
+#navbar .nav-L > a.home {
   transform: scale(1.3);
   margin-left: 1rem;
 }

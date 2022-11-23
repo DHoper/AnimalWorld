@@ -43,7 +43,7 @@
                 </p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item text-danger">危險度&nbsp;:&nbsp;&nbsp;<span><%= animal.dangerous %></span></li>
+                <li class="list-group-item text-danger">危險度&nbsp;:&nbsp;<span><%= animal.dangerous %></span></li>
                 <li class="list-group-item text-muted">
                     <%= animal.location %>
                 </li>
@@ -102,7 +102,7 @@
                             <p class="username">
                                 <span class="fw-bold"><%= animal.author.nickname %></span>(<span><%= animal.author.username %></span> )
                             </p>
-                            <p class="text-muted" ><%= review.date %></p>
+                            <p class="date" ><%= review.date %></p>
                         </div>
                         <p class="reviewContent">
                             <%= review.content %>

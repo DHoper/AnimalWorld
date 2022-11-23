@@ -101,6 +101,7 @@ main .frame .button img {
   z-index: -1;
 }
 main .frame .circle {
+  z-index: -1;
   width: 60px;
   height: 60px;
   position: absolute;

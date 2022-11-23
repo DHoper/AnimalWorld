@@ -1,21 +1,170 @@
 <% layout('layout/boilerplate') %>
 
-<div id="wall">
+  <div id="wall">
     <div class="banner">
-        pending
+     <h1>偉大的世界</h1>
+     <div class="smallText">
+      <p>還有許多</p>
+      <p>你未曾探尋之地</p>
+     </div>
     </div>
     <div class="row">
       <% for(animal of animals) {%>
-        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
-      <% }%>  
-      <% for(animal of animals) {%>
-        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
-      <% }%>  
-      <% for(animal of animals) {%>
-        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
-      <% }%> 
-      <% for(animal of animals) {%>
-        <img class="col-3 p-0 photoBlock" src="<%= animal.image[0].url %>"></img>
-      <% }%> 
+        <div class="photoBlock col-3 p-0">
+          <img class="img" src="<%= animal.image[0].url %>"></img>
+          <div class="filter"></div>
+          <div class="text" tabindex="-1">
+            <div class="detail">
+              <p>
+                <%= animal.date %>
+              </p>
+              <h3>
+                <%= animal.title %>
+              </h3>
+              <p>
+                <%= animal.location %>
+              </p>
+            </div>
+            <div class="line"></div>
+            <span class="button">查看更多</span>
+            <img class='arrow' src="/image/arrow.svg"></img>
+          </div>
+        </div>
+        <% }%>
+        <% for(animal of animals) {%>
+          <div class="photoBlock col-3 p-0">
+            <img class="img" src="<%= animal.image[0].url %>"></img>
+            <div class="filter"></div>
+            <div class="text" tabindex="-1">
+              <div class="detail">
+                <p>
+                  <%= animal.date %>
+                </p>
+                <h3>
+                  <%= animal.title %>
+                </h3>
+                <p>
+                  <%= animal.location %>
+                </p>
+              </div>
+              <div class="line"></div>
+              <span class="button">查看更多</span>
+              <img class='arrow' src="/image/arrow.svg"></img>
+            </div>
+          </div>
+  
+          <% }%>  <% for(animal of animals) {%>
+            <div class="photoBlock col-3 p-0">
+              <img class="img" src="<%= animal.image[0].url %>"></img>
+              <div class="filter"></div>
+              <div class="text" tabindex="-1">
+                <div class="detail">
+                  <p>
+                    <%= animal.date %>
+                  </p>
+                  <h3>
+                    <%= animal.title %>
+                  </h3>
+                  <p>
+                    <%= animal.location %>
+                  </p>
+                </div>
+                <div class="line"></div>
+                <span class="button">查看更多</span>
+                <img class='arrow' src="/image/arrow.svg"></img>
+              </div>
+            </div>
+    
+            <% }%>
+            <% for(animal of animals) {%>
+              <div class="photoBlock col-3 p-0">
+                <img class="img" src="<%= animal.image[0].url %>"></img>
+                <div class="filter"></div>
+                <div class="text" tabindex="-1">
+                  <div class="detail">
+                    <p>
+                      <%= animal.date %>
+                    </p>
+                    <h3>
+                      <%= animal.title %>
+                    </h3>
+                    <p>
+                      <%= animal.location %>
+                    </p>
+                  </div>
+                  <div class="line"></div>
+                  <span class="button">查看更多</span>
+                  <img class='arrow' src="/image/arrow.svg"></img>
+                </div>
+              </div>
+              <% }%>
+              <% for(animal of animals) {%>
+                <div class="photoBlock col-3 p-0">
+                  <img class="img" src="<%= animal.image[0].url %>"></img>
+                  <div class="filter"></div>
+                  <div class="text" tabindex="-1">
+                    <div class="detail">
+                      <p>
+                        <%= animal.date %>
+                      </p>
+                      <h3>
+                        <%= animal.title %>
+                      </h3>
+                      <p>
+                        <%= animal.location %>
+                      </p>
+                    </div>
+                    <div class="line"></div>
+                    <span class="button">查看更多</span>
+                    <img class='arrow' src="/image/arrow.svg"></img>
+                  </div>
+                </div>
+                <% }%>
+                <% for(animal of animals) {%>
+                  <div class="photoBlock col-3 p-0">
+                    <img class="img" src="<%= animal.image[0].url %>"></img>
+                    <div class="filter"></div>
+                    <div class="text" tabindex="-1">
+                      <div class="detail">
+                        <p>
+                          <%= animal.date %>
+                        </p>
+                        <h3>
+                          <%= animal.title %>
+                        </h3>
+                        <p>
+                          <%= animal.location %>
+                        </p>
+                      </div>
+                      <div class="line"></div>
+                      <span class="button">查看更多</span>
+                      <img class='arrow' src="/image/arrow.svg"></img>
+                    </div>
+                  </div>
+                  <% }%>
+                <a class="endBlock col" href="/animal/add">
+                    添加更多發現
+                </a>
     </div>
-</div>
+  </div>
+
+  <script>
+    const text = document.querySelectorAll('.text');
+    const animals = JSON.parse('<%- JSON.stringify(animals) %>');
+    text.forEach((item, index) => {
+      item.addEventListener('click', () => {
+      window.location.href = `${animals[index].id}`;
+    })  
+    })
+
+    const imgArray = [
+    "https://images.unsplash.com/photo-1504870712357-65ea720d6078?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+    "https://images.unsplash.com/photo-1570641963303-92ce4845ed4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80",
+    "https://images.unsplash.com/photo-1489363855452-7327672b1608?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "https://images.unsplash.com/photo-1505764761634-1d77b57e1966?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "https://images.unsplash.com/photo-1506773090264-ac0b07293a64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
+  ];
+  const n = Math.floor(Math.random() * imgArray.length);
+  document.querySelector('.banner').style.backgroundImage = `linear-gradient(rgba(176, 177, 176, 0.121),rgba(77, 79, 79, 0.132)),url(${imgArray[n]})`;
+  </script>

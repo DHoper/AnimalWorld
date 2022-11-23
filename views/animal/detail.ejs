@@ -43,8 +43,7 @@
                 </p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item text-danger">危險度&nbsp;:&nbsp;&nbsp;<%= animal.dangerous %> / 100
-                </li>
+                <li class="list-group-item text-danger">危險度&nbsp;:&nbsp;&nbsp;<span><%= animal.dangerous %></span></li>
                 <li class="list-group-item text-muted">
                     <%= animal.location %>
                 </li>
@@ -55,7 +54,7 @@
                     <form class="d-inline" action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
                         <button class="btn btn-danger ms-3">刪除</button>
                     </form>
-                    <a href="/animals" class="btn btn-primary card-link float-end">回上一頁</a>
+                    <a href="/animals/wall" class="btn btn-primary card-link float-end">回到照片牆</a>
                 </div>
                 <% }%>
                     <div class="card-footer ">

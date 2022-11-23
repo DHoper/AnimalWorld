@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  min-height: 95vh;
+  min-height: 93.5vh;
 }
 
 .alert {
@@ -35,19 +35,25 @@ body::-webkit-scrollbar {
   display: none;
 }
 #index .indexMap .card {
-  transition: all 0.2s ease-in;
+  transition: all 0.4s ease-in;
   border-radius: 0.35rem;
-  border: 0.1rem solid rgb(95, 93, 93);
-  box-shadow: 1px 1px 0 0 rgba(81, 79, 79, 0.875);
+  border: 0.03rem solid rgba(95, 93, 93, 0.341);
+  box-shadow: 0.05rem 0.05rem 0 0 rgba(81, 79, 79, 0.875);
+  padding: 0.45rem 0.4rem;
 }
 #index .indexMap .card:hover {
   transform: scale(1.08) translateY(-0.5rem);
   cursor: pointer;
 }
+#index .indexMap .card:hover > .outer {
+  transform: scale(1.015);
+}
 #index .indexMap .card .outer {
   display: flex;
   margin: 0.25rem;
   border-radius: 0.35rem;
+  box-shadow: 0.4rem 0.4rem 0.8rem 0.05rem rgba(56, 56, 56, 0.753);
+  transition: all 0.6s ease-in 0.1s;
 }
 #index .indexMap .card .outer .img img {
   width: 20rem;
@@ -56,7 +62,6 @@ body::-webkit-scrollbar {
 }
 #index .indexMap .card .outer .content {
   position: relative;
-  border: 1px solid rgb(95, 93, 93);
   border-top-right-radius: 0.35rem;
   border-bottom-right-radius: 0.35rem;
   border-left: none;
@@ -95,10 +100,151 @@ body::-webkit-scrollbar {
   background-color: #0d6efd;
 }
 
+#wall {
+  display: flex;
+  height: 93.5vh;
+}
 #wall .banner {
-  background-color: rgba(220, 217, 217, 0.668);
-  width: 100vw;
-  height: 65vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: rgba(255, 255, 255, 0.682);
+}
+#wall .banner h1 {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  font-size: 4rem;
+  font-weight: bolder;
+  letter-spacing: 2rem;
+  color: #fff;
+  margin-top: 15%;
+}
+#wall .banner .smallText {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wall .banner .smallText p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  letter-spacing: 1rem;
+}
+#wall .row {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-height: 95vh;
+  overflow-y: scroll;
+  background-color: rgba(57, 54, 54, 0.737254902);
+  margin-left: 0rem;
+}
+#wall .row .photoBlock {
+  position: relative;
+  transition: z-index 0.5s ease;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+#wall .row .photoBlock:hover {
+  transition: all 1.2s ease;
+  cursor: pointer;
+  z-index: 1;
+  transform: scale(1.05);
+}
+#wall .row .photoBlock:hover > .filter {
+  background-color: rgba(21, 20, 20, 0.387);
+}
+#wall .row .photoBlock:hover > .text {
+  opacity: 1;
+  transform: translateX(0);
+}
+#wall .row .photoBlock:hover > .text > .button,
+#wall .row .photoBlock:hover > .text .arrow {
+  transform: translateX(0);
+}
+#wall .row .photoBlock .img {
+  width: 100%;
+}
+#wall .row .photoBlock .filter {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  transition: all 2s ease;
+}
+#wall .row .photoBlock .text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: all 2s ease;
+}
+#wall .row .photoBlock .text .detail {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+#wall .row .photoBlock .text .detail h3 {
+  margin: 0.25rem 0 0.5rem 0;
+}
+#wall .row .photoBlock .text .detail p {
+  color: rgb(214, 208, 208);
+}
+#wall .row .photoBlock .text .line {
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+  border-top: 0.15rem solid rgba(214, 208, 208, 0.577);
+  width: 90%;
+}
+#wall .row .photoBlock .text .button {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 5%;
+  width: 100%;
+  font-size: 1.25rem;
+  color: #fff;
+}
+#wall .row .photoBlock .text .arrow {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 5%;
+  width: 4.5rem;
+  height: 3.5rem;
+  transform: translateX(-50%);
+  transition: all 3s ease;
+}
+#wall .row .endBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  background-color: rgba(224, 221, 221, 0.911);
+  transition: all 1s ease;
+}
+#wall .row .endBlock:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  cursor: pointer;
+  background-color: #fff;
 }
 
 #login {
@@ -206,9 +352,36 @@ body::-webkit-scrollbar {
   padding: 2rem 5rem;
 }
 #detail .col-l {
-  width: 40%;
+  width: 35%;
+  margin-right: 5%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   max-height: 100%;
-  padding: 0 2rem;
+  padding: 0;
+  box-shadow: 0.4rem 0.4rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
+}
+#detail .col-l .card {
+  margin-bottom: 0 !important;
+}
+#detail .col-l .card .card-body .card-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 0.35rem;
+}
+#detail .col-l .card .card-body .card-text {
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+  font-size: 1.2rem;
+}
+#detail .col-l .card ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+#detail .col-l .card ul li span {
+  margin-top: 0.15rem;
 }
 #detail .col-r {
   width: 60%;

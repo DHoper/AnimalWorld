@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    min-height: 95vh;
+    min-height: 93.5vh;
 }
 
 .alert {
@@ -29,7 +29,6 @@ body::-webkit-scrollbar {
         position: absolute;
         top: 0;
         width: 100%;
-        // height: 25rem;
         height: 100%;
         margin-top: 3rem;
 
@@ -39,20 +38,27 @@ body::-webkit-scrollbar {
         }
 
         .card {
-            transition: all 0.2s ease-in;
+            transition: all 0.4s ease-in;
             border-radius: .35rem;
-            border: 0.1rem solid rgb(95, 93, 93);
-            box-shadow: 1px 1px 0 0 rgba(81, 79, 79, 0.875);
+            border: 0.03rem solid rgba(95, 93, 93, 0.341);
+            box-shadow: .05rem .05rem 0 0 rgba(81, 79, 79, 0.875);
+            padding: .45rem .4rem;
 
             &:hover {
                 transform: scale(1.08) translateY(-.5rem);
                 cursor: pointer;
+
+                &>.outer {
+                    transform: scale(1.015);
+                }
             }
 
             .outer {
                 display: flex;
                 margin: .25rem;
                 border-radius: .35rem;
+                box-shadow: .4rem .4rem .8rem .05rem rgba(56, 56, 56, 0.753);
+                transition: all .6s ease-in .1s;
 
                 .img {
                     img {
@@ -64,7 +70,6 @@ body::-webkit-scrollbar {
 
                 .content {
                     position: relative;
-                    border: 1px solid rgb(95, 93, 93);
                     border-top-right-radius: .35rem;
                     border-bottom-right-radius: .35rem;
                     border-left: none;
@@ -103,8 +108,8 @@ body::-webkit-scrollbar {
                         }
 
                         a:focus {
-                           box-shadow: none;
-                           background-color: #0d6efd;
+                            box-shadow: none;
+                            background-color: #0d6efd;
                         }
 
                     }
@@ -115,10 +120,164 @@ body::-webkit-scrollbar {
 }
 
 #wall {
+    display: flex;
+    height: 93.5vh;
+
     .banner {
-        background-color: rgba(220, 217, 217, 0.668);
-        width: 100vw;
-        height: 65vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 180rem;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        color: rgba(255, 255, 255, 0.682);
+
+        h1 {
+            writing-mode: vertical-lr;
+            font-size: 4rem;font-weight: bolder;
+            letter-spacing: 2rem;
+            color: #fff;
+            margin-top: 15%;
+        }
+
+        .smallText {
+            position: absolute;
+            bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                letter-spacing: 1rem;
+            }
+        }
+    }
+
+    .row {
+        height: max-content;
+        max-height: 95vh;
+        overflow-y: scroll;            
+        background-color: #393636bc;
+        margin-left: 0rem;
+
+        .photoBlock {
+            position: relative;
+            transition: z-index .5s ease;
+            flex-grow: 0;
+            flex-shrink: 0;
+            height: max-content;
+
+            &:hover {
+                transition: all 1.2s ease;
+                cursor: pointer;
+                z-index: 1;
+                transform: scale(1.05);
+
+                &>.filter {
+                    background-color: rgba(21, 20, 20, 0.387)
+                }
+
+                &>.text {
+                    opacity: 1;
+                    transform: translateX(0);
+
+                    &>.button,
+                    .arrow {
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            .img {
+                width: 100%;
+            }
+
+            .filter {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                transition: all 2s ease;
+            }
+
+            .text {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                opacity: 0;
+                transform: translateX(-5%);
+                transition: all 2s ease;
+
+                .detail {
+                    position: absolute;
+                    bottom: 5%;
+                    left: 5%;
+                    color: #fff;
+                    font-size: 1rem;
+                    margin-bottom: 5rem;
+
+                    h3 {
+                        margin: .25rem 0 .5rem 0;
+                    }
+
+                    p {
+                        color: rgb(214, 208, 208);
+                    }
+                }
+
+                .line {
+                    position: absolute;
+                    right: 5%;
+                    bottom: 20%;
+                    border-top: 0.15rem solid rgba(214, 208, 208, 0.577);
+                    width: 90%;
+
+                }
+
+                .button {
+                    position: absolute;
+                    bottom: 1.25rem;
+                    left: 5%;
+                    width: 100%;
+                    font-size: 1.25rem;
+                    color: #fff;
+                }
+
+                .arrow {
+                    position: absolute;
+                    bottom: .5rem;
+                    right: 5%;
+                    width: 4.5rem;
+                    height: 3.5rem;
+                    transform: translateX(-50%);
+                    transition: all 3s ease;
+                }
+            }
+        }
+
+        .endBlock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 2rem;
+            color: black;
+            background-color: rgba(224, 221, 221, 0.911);
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                z-index: 1;
+                cursor: pointer;
+                background-color: #fff;
+            }
+        }
     }
 }
 
@@ -249,9 +408,40 @@ body::-webkit-scrollbar {
     padding: 2rem 5rem;
 
     .col-l {
-        width: 40%;
+        width: 35%;
+        margin-right: 5%;
+        height: max-content;
         max-height: 100%;
-        padding: 0 2rem;
+        padding: 0 ;
+        box-shadow: .4rem .4rem .4rem .05rem rgba(56, 56, 56, 0.341);
+
+        .card {
+            margin-bottom: 0!important;
+
+            .card-body {
+                .card-title {
+                    font-size: 2rem;
+                    font-weight: bolder;
+                    letter-spacing: .35rem;
+                }
+                .card-text {
+                    display: flex;
+                    align-items: center;
+                    min-height: 4rem;
+                    font-size: 1.2rem;
+                }
+            }
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+                    span {
+                        margin-top: .15rem;
+                    }
+                }
+            }
+        }
     }
 
     .col-r {
@@ -423,15 +613,17 @@ body::-webkit-scrollbar {
 
     .row {
         background-color: transparent;
+
         .outer {
             background-color: transparent;
+
             .card {
                 width: 25vw;
                 background-color: transparent;
 
                 .card-img-top {
                     height: 32vh;
-                } 
+                }
 
                 .card-body {
                     display: flex;
@@ -440,22 +632,22 @@ body::-webkit-scrollbar {
                     align-items: center;
                     background-color: #7472726f;
                     color: #fff;
-    
+
                     form {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-    
+
                         .mb-3 {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                         }
-    
+
                         .form-control {
                             border: none;
                             transition: none;
-                
+
                             &:focus {
                                 box-shadow: 0 0 0 0;
                             }
@@ -465,16 +657,16 @@ body::-webkit-scrollbar {
                             height: 8rem;
                             resize: none;
                         }
-    
+
                         input {
                             text-align: center;
-    
+
                         }
-    
+
                         button {
                             width: 50%;
                             transform: translateX(50%);
-                            background-color:  #f4eaea85;
+                            background-color: #f4eaea85;
                             border-color: rgba(208, 207, 207, 0.599);
                         }
                     }
@@ -482,10 +674,10 @@ body::-webkit-scrollbar {
             }
         }
     }
-    
-  
 
-   
+
+
+
 }
 
 #edit {
@@ -500,15 +692,17 @@ body::-webkit-scrollbar {
 
     .row {
         background-color: transparent;
+
         .outer {
             background-color: transparent;
-            & > .card {
+
+            &>.card {
                 width: 35vw;
                 background-color: transparent;
 
                 .card-img-top {
                     height: 32vh;
-                } 
+                }
 
                 .card-body {
                     display: flex;
@@ -517,23 +711,24 @@ body::-webkit-scrollbar {
                     align-items: center;
                     background-color: #b8baba73;
                     color: #fff;
-    
+
                     form {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-self: stretch;
                         padding: 0 10%;
+
                         .mb-3 {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                         }
-    
+
                         .form-control {
                             border: none;
                             transition: none;
-                
+
                             &:focus {
                                 box-shadow: 0 0 0 0;
                             }
@@ -547,10 +742,10 @@ body::-webkit-scrollbar {
                         .delImg {
                             flex-direction: row;
                         }
-    
+
                         input {
                             text-align: center;
-    
+
                         }
 
                         h6 {
@@ -561,10 +756,10 @@ body::-webkit-scrollbar {
                             display: flex;
                             justify-content: space-around;
                             flex: 1 1 auto;
-                            
+
                             button {
                                 transform: translateX(50%);
-                                background-color:  #31a131c4;
+                                background-color: #31a131c4;
                                 border-color: rgba(208, 207, 207, 0.599);
                             }
 
@@ -573,7 +768,7 @@ body::-webkit-scrollbar {
                                 border-color: rgba(195, 199, 206, 0.49);
                                 color: #fff;
                             }
-                        }  
+                        }
                     }
                 }
             }
@@ -586,13 +781,14 @@ body::-webkit-scrollbar {
     padding: 1rem;
 
     .logo {
-            width: 3rem;
+        width: 3rem;
     }
 
-    .nav-L{
+    .nav-L {
         &>a {
             font-size: 1.2rem;
             margin-right: 2rem;
+
             &:focus {
                 transform: scale(1.1);
             }

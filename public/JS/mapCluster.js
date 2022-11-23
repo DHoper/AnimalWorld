@@ -29,7 +29,7 @@ map.on('load', () => {
             'circle-color': [
                 'step',
                 ['get', 'point_count'],
-                '#6dca4b',
+                '#3aba55',
                 15,
                 '#51bbd6',
                 30,
@@ -65,7 +65,7 @@ map.on('load', () => {
         source: 'geoData',
         filter: ['!', ['has', 'point_count']],
         paint: {
-            'circle-color': '#6dca4b',
+            'circle-color': '#3aba55',
             'circle-radius': 10,
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff'

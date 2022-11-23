@@ -246,7 +246,7 @@ main .btn-secondary:hover {
     transform: scale(0.8);
   }
   62% {
-    opacity: 1;
+    opacity: 0.8;
     transform: scale(1.15);
   }
   100% {
@@ -260,7 +260,7 @@ main .btn-secondary:hover {
     transform: scale(0.8);
   }
   62% {
-    opacity: 1;
+    opacity: 0.8;
     transform: scale(1.15);
   }
   100% {

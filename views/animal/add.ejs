@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="outer">
                     <div class="card shadow">
-                        <img src="https://wallpapercave.com/wp/8HB34Wh.jpg" alt="" class="card-img-top" />
+                        <img src="https://wallpapercave.com/wp/8HB34Wh.jpg" alt="" class="img-fulid img" />
                         <div class="card-body">
                             <form action="/animals" method="POST" novalidate class="validated"
                                 enctype="multipart/form-data">
@@ -73,5 +73,5 @@
         ];
         const n = Math.floor(Math.random() * imgArray.length);
         document.querySelector('#add').style.backgroundImage = `linear-gradient(rgb(177 174 174 / 38%), rgb(176 177 174 / 17%)),url(${imgArray[n]})`;
-        document.querySelector('.card-img-top').src = imgArray[n];
+        document.querySelector('.img').src = imgArray[n];
     </script>

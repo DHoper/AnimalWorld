@@ -1,7 +1,9 @@
+@charset "UTF-8";
 @import url("reset.css");
 body {
   font-size: 1rem;
   -ms-overflow-style: none;
+  font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -198,7 +200,7 @@ body::-webkit-scrollbar {
 }
 #wall .row .photoBlock .text .detail {
   position: absolute;
-  bottom: 5%;
+  top: 10%;
   left: 7%;
   color: #fff;
   font-size: 1rem;
@@ -219,7 +221,7 @@ body::-webkit-scrollbar {
 }
 #wall .row .photoBlock .text .button {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 5%;
   left: 7%;
   width: 100%;
   font-size: 1.25rem;
@@ -227,7 +229,7 @@ body::-webkit-scrollbar {
 }
 #wall .row .photoBlock .text .arrow {
   position: absolute;
-  bottom: 0rem;
+  bottom: 0;
   right: 5%;
   width: 4.5rem;
   height: 3.5rem;
@@ -363,7 +365,7 @@ body::-webkit-scrollbar {
   height: max-content;
   max-height: 100%;
   padding: 0;
-  box-shadow: 0.4rem 0.4rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
+  box-shadow: 0.5rem 2.2rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
 }
 #detail .col-l .card {
   margin-bottom: 0 !important;
@@ -371,7 +373,7 @@ body::-webkit-scrollbar {
 #detail .col-l .card .card-body .card-title {
   font-size: 2rem;
   font-weight: bolder;
-  letter-spacing: 0.35rem;
+  letter-spacing: 0.25rem;
 }
 #detail .col-l .card .card-body .card-text {
   display: flex;
@@ -395,18 +397,20 @@ body::-webkit-scrollbar {
   position: relative;
   width: 100%;
   height: 40%;
+  box-shadow: 0.3rem 0.3rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
 }
 #detail .col-r #map .mapboxgl-ctrl-logo,
 #detail .col-r #map .mapboxgl-ctrl-attrib-inner {
   display: none;
 }
 #detail .col-r .reviewForm {
-  border: 1px solid #CDD7D6;
+  border: 0.5px solid rgba(205, 215, 214, 0.6039215686);
   border-radius: 0.1rem;
   margin-top: 1rem;
   height: 15%;
   width: 100%;
   position: relative;
+  box-shadow: 0.3rem 0.3rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
 }
 #detail .col-r .reviewForm .reviewInput {
   height: 70%;
@@ -469,10 +473,10 @@ body::-webkit-scrollbar {
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(55, 128, 85, 0.5960784314);
-  border-left: 2px solid rgba(73, 151, 106, 0.5960784314);
-  border-bottom: 3px solid rgba(82, 174, 120, 0.5960784314);
+  border-right: 0.03rem solid rgba(116, 118, 116, 0.1803921569);
+  border-bottom: 0.1rem solid rgba(117, 183, 145, 0.4862745098);
   margin-bottom: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
 }
 #detail .col-r .reviews .review .reviewTitle {
   position: relative;
@@ -481,8 +485,7 @@ body::-webkit-scrollbar {
   align-items: center;
   text-align: center;
   padding: 0.1rem 0.1rem 0.1rem 0rem;
-  border-right: 1px solid rgba(96, 170, 127, 0.5960784314);
-  background-color: #F7FFF7;
+  background-color: #ecf9ec;
   color: #208AAE;
 }
 #detail .col-r .reviews .review .reviewTitle .starability-result {
@@ -519,6 +522,9 @@ body::-webkit-scrollbar {
       writing-mode: vertical-lr;
   text-align: center;
 }
+#detail .col-r ::-webkit-scrollbar {
+  display: none;
+}
 
 #add {
   display: flex;
@@ -537,12 +543,13 @@ body::-webkit-scrollbar {
 #add .row .outer {
   background-color: transparent;
 }
-#add .row .outer .card {
-  width: 25vw;
-  background-color: transparent;
+#add .row .outer img {
+  min-width: 100%;
+  height: 17vw;
 }
-#add .row .outer .card .card-img-top {
-  height: 32vh;
+#add .row .outer .card {
+  width: 28vw;
+  background-color: transparent;
 }
 #add .row .outer .card .card-body {
   display: flex;
@@ -551,6 +558,7 @@ body::-webkit-scrollbar {
   align-items: center;
   background-color: rgba(116, 114, 114, 0.4352941176);
   color: #fff;
+  padding: 5%;
 }
 #add .row .outer .card .card-body form {
   display: flex;
@@ -729,9 +737,9 @@ body::-webkit-scrollbar {
     font-size: 8px !important;
   }
 }
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1360px) {
   html {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
 }
 @media only screen and (min-width: 1500px) {

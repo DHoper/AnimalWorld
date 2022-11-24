@@ -54,16 +54,24 @@
             crossorigin="anonymous"></script>
 
         <script src="/JS/validater.js"></script>
+        
         <script>
-            const nav = Array.from(document.querySelector('.nav-L').children);
-            nav.forEach((item, index) => {
+            const navL = Array.from(document.querySelector('.nav-L').children);
+            navL.forEach((item, index) => {
                 if(item.baseURI == item.href) {
                     item.classList.add('active');
                 }else {
                     item.classList.remove('active');
                 }
             })
-            console.log(nav);
+            const navR = Array.from(document.querySelector('.nav-R').children);
+            navR.forEach((item, index) => {
+                if(item.baseURI == item.href) {
+                    item.classList.add('active');
+                }else {
+                    item.classList.remove('active');
+                }
+            })
         </script>
 </body>
 </html>

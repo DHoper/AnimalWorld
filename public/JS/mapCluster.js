@@ -29,20 +29,20 @@ map.on('load', () => {
             'circle-color': [
                 'step',
                 ['get', 'point_count'],
-                '#3aba55',
-                5,
                 '#51bbd6',
                 10,
+                '#3aba55',
+                20,
                 '#f28cb1'
             ],
             'circle-radius': [
                 'step',
                 ['get', 'point_count'],
-                15,
-                5,
-                25,
                 10,
-                35
+                10,
+                20,
+                20,
+                30
             ]
         }
     });
@@ -65,8 +65,8 @@ map.on('load', () => {
         source: 'geoData',
         filter: ['!', ['has', 'point_count']],
         paint: {
-            'circle-color': '#3aba55',
-            'circle-radius': 10,
+            'circle-color': '#51bbd6',
+            'circle-radius': 5,
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff'
         }

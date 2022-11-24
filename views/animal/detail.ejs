@@ -100,7 +100,7 @@
                             <p class="starability-result" data-rating="<%= review.rating %>">
                                 Rated: <%= review.rating %> stars </p>
                             <p class="username">
-                                <span class="fw-bold"><%= review.author.nickname %></span>(<span><%= animal.author.username %></span> )
+                                <span class="fw-bold"><%= review.author.nickname %></span>(<span><%= review.author.username %></span> )
                             </p>
                             <p class="date" ><%= review.date %></p>
                         </div>
@@ -126,7 +126,7 @@
 
     const reviews = document.querySelector('.reviews');
     let reviewH = document.querySelector('.review').clientHeight;
-    reviews.style.height = `calc(${reviewH*4}px + 2.5rem`;
+    reviews.style.height = `calc(${reviewH*4}px + 2.2rem`;
 </script>
 
 <script src="/JS/detailMap.js"></script>

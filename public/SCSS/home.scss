@@ -223,38 +223,46 @@ main {
 
 //------------------------------------------------------//
 
-@media only screen and (min-width: 0px) {
+@media screen and (max-width: 1500px) {
   html {
-    font-size: 4px !important;
+    font-size: 16px !important;
   }
 }
 
-@media only screen and (min-width: 401px) {
-  html {
-    font-size: 6px !important;
-  }
-}
-
-@media only screen and (min-width: 428px) {
-  html {
-    font-size: 6px !important;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 8px !important;
-  }
-}
-
-@media only screen and (min-width: 1350px) {
+@media screen and (max-width: 1365px) {
   html {
     font-size: 13px !important;
   }
 }
 
-@media only screen and (min-width: 1500px) {
+
+@media screen and (max-width: 1030px) {
   html {
-    font-size: 16px !important;
+    font-size: 8px !important;
   }
 }
+
+@media screen and (max-width: 790px) {
+  html {
+    font-size: 6px !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 4px !important;
+  }
+  .button {
+    padding: 4rem !important;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  html {
+    font-size: 4px !important;
+  }
+  .button {
+    padding: 4rem;
+  }
+}
+

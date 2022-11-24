@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("reset.css");
+@import url("media.css");
 body {
   font-size: 1rem;
   -ms-overflow-style: none;
@@ -41,7 +42,7 @@ body::-webkit-scrollbar {
   border-radius: 0.35rem;
   border: 0.03rem solid rgba(95, 93, 93, 0.341);
   box-shadow: 0.05rem 0.05rem 0 0 rgba(81, 79, 79, 0.875);
-  padding: 0.45rem 0.4rem;
+  padding: 0.8rem 0.6rem;
 }
 #index .indexMap .card:hover {
   transform: scale(1.08) translateY(-0.5rem);
@@ -81,7 +82,7 @@ body::-webkit-scrollbar {
   font-size: 1.5rem;
   margin: 0;
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 #index .indexMap .card .outer .content .card-body .location {
   margin: 0.5rem 0 0 0.5rem;
@@ -462,12 +463,12 @@ body::-webkit-scrollbar {
 }
 #detail .col-r .reviewForm .reviewBottom button {
   width: 4rem;
-  height: 1.8rem;
   font-size: 0.8rem;
   margin-right: 1rem;
   padding: 0.1rem;
   background-color: #00C48A;
   color: #fff;
+  border-radius: 0.2rem;
 }
 #detail .col-r .reviews {
   overflow-y: scroll;
@@ -492,8 +493,6 @@ body::-webkit-scrollbar {
   padding: 0.1rem 0.1rem 0.1rem 0rem;
   background-color: rgba(0, 0, 0, 0.076);
   color: rgba(16, 16, 17, 0.9411764706);
-  height: 5rem;
-  width: 12rem;
 }
 #detail .col-r .reviews .review .reviewTitle .starability-result {
   transform: scale(0.6) translateY(10%);
@@ -531,6 +530,7 @@ body::-webkit-scrollbar {
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
   text-align: center;
+  margin-right: 0.25rem;
 }
 #detail .col-r ::-webkit-scrollbar {
   display: none;
@@ -685,21 +685,33 @@ body::-webkit-scrollbar {
 }
 #navbar .logo {
   width: 3rem;
+  margin-right: 0.5rem;
 }
-#navbar .nav-L > a {
+#navbar .active {
+  text-decoration: underline;
+  text-underline-offset: 0.7rem;
+}
+#navbar a {
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   margin-right: 2rem;
   transition: all 0.7s ease;
+  line-height: 1.5rem;
 }
-#navbar .nav-L > a:hover {
+#navbar a:hover {
   color: #fff;
 }
-#navbar .nav-L > a:focus {
+#navbar a:focus {
   transform: scale(1.1);
 }
-#navbar .nav-L > a.home {
-  transform: scale(1.3);
+#navbar .nav-L .home {
+  font-size: 2rem;
   margin-left: 1rem;
+  color: rgb(233, 230, 230);
+}
+#navbar .nav-R {
+  margin: 0;
 }
 
 #error {
@@ -725,35 +737,5 @@ body::-webkit-scrollbar {
   100% {
     z-index: -1;
     visibility: hidden;
-  }
-}
-@media only screen and (min-width: 340px) {
-  html {
-    font-size: 4px !important;
-  }
-}
-@media only screen and (min-width: 401px) {
-  html {
-    font-size: 6px !important;
-  }
-}
-@media only screen and (min-width: 428px) {
-  html {
-    font-size: 6px !important;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 8px !important;
-  }
-}
-@media only screen and (min-width: 1360px) {
-  html {
-    font-size: 12px !important;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  html {
-    font-size: 16px !important;
   }
 }/*# sourceMappingURL=app.css.map */

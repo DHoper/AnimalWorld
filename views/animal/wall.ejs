@@ -38,7 +38,7 @@
 
   <script>
     const text = document.querySelectorAll('.text');
-    const animals = JSON.parse('<%- JSON.stringify(animals) %>');
+    const animals = <%- JSON.stringify(animals)%>; //待處理//
     text.forEach((item, index) => {
       item.addEventListener('click', () => {
       window.location.href = `${animals[index].id}`;

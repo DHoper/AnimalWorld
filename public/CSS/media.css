@@ -311,6 +311,16 @@
   html {
     font-size: 6px !important;
   }
+  body #navbar .logo {
+    width: 8rem;
+  }
+  body #navbar .navbar-brand {
+    font-size: 3.5rem;
+  }
+  body #navbar button {
+    width: 7rem;
+    height: 5rem;
+  }
   body #main #index .indexMap .card {
     padding: 0.5rem;
   }

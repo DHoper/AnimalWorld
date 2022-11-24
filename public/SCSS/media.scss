@@ -454,6 +454,18 @@
         font-size: 6px !important;
     }
     body {
+        #navbar {
+            .logo {
+                width: 8rem;
+            }
+            .navbar-brand {
+                font-size: 3.5rem;
+            }
+            button {
+                width: 7rem;
+                height: 5rem;
+            }
+        }
         #main {
             #index {
                 .indexMap {

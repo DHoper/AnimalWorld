@@ -19,6 +19,15 @@
   html {
     font-size: 10px !important;
   }
+  html body #main #detail {
+    margin-top: 9%;
+  }
+  html body #main #detail .col-r .reviewForm .reviewBottom .l-container .starability-basic {
+    margin-top: 1.7rem;
+  }
+  html body #main #detail .col-r .reviewForm .reviewBottom button {
+    width: 7.5rem;
+  }
 }
 @media screen and (max-width: 991px) {
   body #navbar .logo {
@@ -51,6 +60,12 @@
   body #navbar a {
     justify-content: center;
   }
+  body #main #add .container .row .outer .card {
+    width: 45vw;
+  }
+  body #main #add .container .row .outer .card .img {
+    display: none;
+  }
 }
 @media screen and (max-width: 770px) {
   html {
@@ -63,6 +78,10 @@
   body #navbar button {
     width: 9rem;
     height: 7rem;
+  }
+  body #navbar button span {
+    width: 4rem;
+    height: 4rem;
   }
   body #navbar .active {
     text-decoration: underline;
@@ -81,8 +100,9 @@
   }
   body #navbar .navbar-collapse .nav-L {
     flex-direction: row;
-    margin-left: 30%;
     margin-bottom: -1rem;
+    margin-left: auto;
+    transform: translateX(4.3rem);
   }
   body #navbar .navbar-collapse .nav-L .home {
     font-size: 3rem;
@@ -100,7 +120,7 @@
     margin-left: 3rem;
   }
   body #navbar a {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   body #main #wall .row .photoBlock .text .detail {
     position: absolute;
@@ -143,20 +163,122 @@
   body #main #wall .row .col-3 {
     width: 50%;
   }
-  body #main #detail .col-r .reviewForm .reviewBottom .l-container .starability-basic {
-    margin-top: 1.7rem;
+  body #main #detail {
+    flex-direction: column;
+    flex-wrap: unset;
+    padding: 0;
+    margin: 0;
+    height: unset;
   }
-  body #main #detail .col-r .reviewForm .reviewBottom button {
-    width: 7.5rem;
+  body #main #detail .col-l {
+    width: 100%;
+    margin: 0;
+  }
+  body #main #detail .col-l .card .card-body h3 {
+    text-align: center;
+    font-size: 4.5rem;
+    line-height: 8rem;
+  }
+  body #main #detail .col-l .card .card-body p {
+    font-size: 2.5rem;
+    justify-content: center;
+  }
+  body #main #detail .col-l .card ul li {
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+  body #main #detail .col-l .card .card-footer {
+    display: flex;
+    justify-content: center;
+  }
+  body #main #detail .col-r {
+    width: 100%;
+  }
+  body #main #detail .col-r #map {
+    height: 30vh;
+    box-shadow: none;
+  }
+  body #main #detail .col-r form {
+    margin: 0;
+    box-shadow: none;
+  }
+  body #main #detail .col-r form .reviewBottom {
+    height: unset;
+    padding: 1rem 0;
+  }
+  body #main #detail .col-r form .reviewBottom .starability-basic {
+    min-height: unset;
+    margin-top: -0.8rem !important;
+  }
+  body #main #detail .col-r .reviews {
+    margin: 0;
+    padding-bottom: 1rem !important;
+    height: unset !important;
+  }
+  body #main #add .container .row .outer .card {
+    width: 45vw;
+    height: 70vh;
+  }
+  body #main #edit .container .row .outer .card {
+    width: 80vw;
+    border: none;
+  }
+  body #main #edit .container .row .outer .card h1 {
+    font-size: 5rem;
+  }
+  body #main #edit .container .row .outer .card .delImg .col {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  body #main #edit .container .row .outer .card .delImg .col .img-card {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body #main #edit .container .row .outer .card .delImg .col .img-card .card-img {
+    width: 20vw;
+    border: none;
+  }
+  body #main #edit .container .row .outer .card .delImg .col .img-card .card-img-overlay {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body #main #edit .container .row .outer .card .delImg .col .img-card .card-img-overlay input {
+    width: 3rem;
+    height: 3rem;
   }
 }
 @media screen and (max-width: 580px) {
   html {
     font-size: 6px !important;
   }
+  body #main .nav-L {
+    margin-left: 18% !important;
+  }
+  body #main #add .container .row .outer .card {
+    width: 55vw;
+  }
+  body #main #add .container .row .outer .card .img {
+    display: none;
+  }
 }
 @media only screen and (max-width: 380px) {
   html {
     font-size: 4px !important;
+  }
+  body #main #add .container .row .outer .card {
+    width: 65vw;
+    border: none;
+  }
+  body #main #add .container .row .outer .card .img {
+    display: none;
+  }
+  body #main #add .container .row .outer .card h1 {
+    font-size: 5rem;
   }
 }/*# sourceMappingURL=media.css.map */

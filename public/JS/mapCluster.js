@@ -117,6 +117,7 @@ map.on('load', () => {
             </div>
         </div>`; 
 
+
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
             coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }

@@ -1,5 +1,5 @@
 mapboxgl.accessToken = mapToken;//遞入自 detail.ejs
-animalDeliver = JSON.parse(animalDeliver);//同上，並將字串解析為JSON對象
+// animalDeliver = JSON.parse(animalDeliver);//同上，並將字串解析為JSON對象//暫時廢棄
 
 const map = new mapboxgl.Map({
     container: 'map',

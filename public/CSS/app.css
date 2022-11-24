@@ -477,6 +477,7 @@ body::-webkit-scrollbar {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   border: 0.5px solid rgba(205, 215, 214, 0.2784313725);
   margin-bottom: 0.5rem;
   box-shadow: 0.5rem 0.3rem 0.4rem 0.05rem rgba(56, 56, 56, 0.341);
@@ -491,9 +492,11 @@ body::-webkit-scrollbar {
   padding: 0.1rem 0.1rem 0.1rem 0rem;
   background-color: rgba(0, 0, 0, 0.076);
   color: rgba(16, 16, 17, 0.9411764706);
+  height: 5rem;
+  width: 12rem;
 }
 #detail .col-r .reviews .review .reviewTitle .starability-result {
-  transform: scale(0.6);
+  transform: scale(0.6) translateY(10%);
 }
 #detail .col-r .reviews .review .reviewTitle p {
   margin-bottom: 0.2rem;

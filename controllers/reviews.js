@@ -6,7 +6,7 @@ module.exports.post = async (req, res) => {
     const review = new Review(req.body);
     review.author = req.user._id;
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    let date = new Date().toLocaleDateString(undefined, options);
+    let date = new Date().toLocaleDateString('zh-TW', options);
     review.date = date;
     animal.reviews.push(review);
     await review.save();

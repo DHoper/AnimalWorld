@@ -44,7 +44,7 @@ module.exports.addPost = async (req, res) => {
     animal.image = req.files.map(f => ({ url: f.path, filename: f.filename }));
     animal.author = req.user._id;
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    let date = new Date().toLocaleDateString(undefined, options);
+    let date = new Date().toLocaleDateString('zh-TW', options);
     animal.date = date;
     await animal.save();
     req.flash('success', "發佈成功 !");
@@ -65,7 +65,7 @@ module.exports.editPut = async (req, res) => {
     const { id } = req.params;
     const animal = await Animal.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    let date = new Date().toLocaleDateString(undefined, options);
+    let date = new Date().toLocaleDateString('zh-TW', options);
     animal.date = date;
     if (req.files.length > 0) {
         const img = req.files.map(f => ({ url: f.path, filename: f.filename }));

@@ -554,6 +554,7 @@ body::-webkit-scrollbar {
                 position: relative;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 border: .5px solid #cdd7d647;
                 margin-bottom: .5rem;
                 box-shadow: .5rem .3rem .4rem .05rem rgba(56, 56, 56, 0.341);
@@ -569,9 +570,11 @@ body::-webkit-scrollbar {
                     padding: .1rem 0.1rem 0.1rem 0rem;
                     background-color: rgba(0, 0, 0, 0.076);
                     color: #101011f0;
+                    height: 5rem;
+                    width: 12rem;
 
                     .starability-result {
-                        transform: scale(.6);
+                        transform: scale(.6) translateY(10%);
                     }
 
                     p {

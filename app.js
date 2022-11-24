@@ -80,12 +80,6 @@ app.use((req, res, next) => {
     next();
 })
 
-// app.get('/fakeUser',async (req, res, next) => {
-//     const user = new User({email : "33", username : "11"});
-//     const newUser = await User.register(user, "12");
-//     res.send(newUser);
-// })
-
 app.use('/', usersRoute);
 app.use('/animals', animalsRoute);
 app.use('/animals/:id/reviews', reviewsRoute);

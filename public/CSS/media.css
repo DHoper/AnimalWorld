@@ -205,14 +205,18 @@
   body #main #detail .col-l .card .card-body p {
     font-size: 2.5rem;
     justify-content: center;
+    text-align: center;
   }
   body #main #detail .col-l .card ul li {
     justify-content: center;
     font-size: 2.5rem;
+    text-align: center;
   }
   body #main #detail .col-l .card .card-footer {
     display: flex;
     justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
   }
   body #main #detail .col-r {
     width: 100%;
@@ -237,6 +241,10 @@
     margin: 0;
     padding-bottom: 1rem !important;
     height: unset !important;
+    font-size: 2.5rem;
+  }
+  body #main #detail .col-r .reviews .review .reviewContent {
+    margin-left: 1rem;
   }
   body #main #add .container .row .outer .card {
     width: 45vw;
@@ -301,7 +309,7 @@
 }
 @media only screen and (max-width: 380px) {
   html {
-    font-size: 4px !important;
+    font-size: 6px !important;
   }
   body #main #index .indexMap .card {
     padding: 0.5rem;

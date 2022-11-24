@@ -66,6 +66,26 @@
   body #main #add .container .row .outer .card .img {
     display: none;
   }
+  body #main #index .indexMap .card {
+    padding: 1.1rem 0.8rem;
+  }
+  body #main #index .indexMap .card .outer .content {
+    width: 12rem;
+  }
+  body #main #index .indexMap .card .outer .content .card-body {
+    justify-content: space-around;
+  }
+  body #main #index .indexMap .card .outer .content .card-body .title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: bold;
+  }
+  body #main #index .indexMap .card .outer .content .card-body .description {
+    display: none;
+  }
+  body #main #index .indexMap .card .outer .content .card-body a {
+    margin-top: 0.5rem;
+  }
 }
 @media screen and (max-width: 770px) {
   html {
@@ -121,6 +141,9 @@
   }
   body #navbar a {
     font-size: 2.5rem;
+  }
+  body #main #index .indexMap .card .outer .img img {
+    width: 30rem;
   }
   body #main #wall .row .photoBlock .text .detail {
     position: absolute;
@@ -260,6 +283,15 @@
   body #main .nav-L {
     margin-left: 18% !important;
   }
+  body #main #index .indexMap .card {
+    padding: 1.4rem 1rem;
+  }
+  body #main #index .indexMap .card .outer .content {
+    width: 14rem;
+  }
+  body #main #index .indexMap .card .outer .content .card-body .location {
+    display: none;
+  }
   body #main #add .container .row .outer .card {
     width: 55vw;
   }
@@ -270,6 +302,15 @@
 @media only screen and (max-width: 380px) {
   html {
     font-size: 4px !important;
+  }
+  body #main #index .indexMap .card {
+    padding: 0.5rem;
+  }
+  body #main #index .indexMap .card .outer .img img {
+    width: 50rem;
+  }
+  body #main #index .indexMap .card .outer .content {
+    display: none;
   }
   body #main #add .container .row .outer .card {
     width: 65vw;

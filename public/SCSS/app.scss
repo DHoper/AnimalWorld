@@ -850,6 +850,14 @@ body::-webkit-scrollbar {
         text-underline-offset: .7rem;
     }
 
+    .collapse {
+        a {
+            &:focus {
+                transform: scale(1.1);
+            }
+        }
+    }
+
     a {
         display: flex;
         align-items: center;
@@ -860,10 +868,6 @@ body::-webkit-scrollbar {
 
         &:hover {
             color: #fff;
-        }
-
-        &:focus {
-            transform: scale(1.1);
         }
     }
 

@@ -122,7 +122,7 @@
     flex-direction: row;
     margin-bottom: -1rem;
     margin-left: auto;
-    transform: translateX(4.3rem);
+    transform: translateX(8%);
   }
   body #navbar .navbar-collapse .nav-L .home {
     font-size: 3rem;
@@ -287,9 +287,6 @@
 @media screen and (max-width: 580px) {
   html {
     font-size: 6px !important;
-  }
-  body #main .nav-L {
-    margin-left: 18% !important;
   }
   body #main #index .indexMap .card {
     padding: 1.4rem 1rem;

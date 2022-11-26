@@ -723,6 +723,9 @@ body::-webkit-scrollbar {
   text-decoration: underline;
   text-underline-offset: 0.7rem;
 }
+#navbar .collapse a:focus {
+  transform: scale(1.1);
+}
 #navbar a {
   display: flex;
   align-items: center;
@@ -733,9 +736,6 @@ body::-webkit-scrollbar {
 }
 #navbar a:hover {
   color: #fff;
-}
-#navbar a:focus {
-  transform: scale(1.1);
 }
 #navbar .nav-L .home {
   font-size: 2rem;

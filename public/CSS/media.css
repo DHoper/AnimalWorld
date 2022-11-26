@@ -350,6 +350,10 @@
   body #navbar .navbar-brand {
     font-size: 3.5rem;
   }
+  body #navbar .nav-L a {
+    font-size: 2rem;
+    margin: 0 1.5rem !important;
+  }
   body #navbar button {
     width: 7rem;
     height: 5rem;

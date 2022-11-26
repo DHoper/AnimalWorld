@@ -3,7 +3,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',
     center: [ 120.93874358912397, 23.92239934359359],
-    zoom: 3
+    zoom: 2
 });
 
 map.dragRotate.disable();

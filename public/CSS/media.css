@@ -300,6 +300,39 @@
   body #main #index .indexMap .card .outer .content .card-body .location {
     display: none;
   }
+  body #main #wall {
+    flex-direction: column;
+  }
+  body #main #wall .banner {
+    width: unset;
+    height: 50vh;
+  }
+  body #main #wall .banner h1 {
+    margin-top: 5%;
+  }
+  body #main #wall .banner .smallText {
+    position: static;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  body #main #wall .banner .smallText p {
+    font-size: 2.5rem;
+  }
+  body #main #wall .row {
+    width: unset;
+  }
+  body #main #wall .row .col-3 {
+    width: 33.33333%;
+  }
+  body #main #wall .row .col-3 .text .detail {
+    flex-direction: column;
+  }
+  body #main #wall .row .col-3 .text .detail h3 {
+    margin-top: 1rem;
+  }
+  body #main #wall .row .col-3 .text .detail p {
+    display: block;
+  }
   body #main #add .container .row .outer .card {
     width: 55vw;
   }
@@ -329,6 +362,12 @@
   }
   body #main #index .indexMap .card .outer .content {
     display: none;
+  }
+  body #main #wall .row {
+    width: unset;
+  }
+  body #main #wall .row .col-3 {
+    width: 50%;
   }
   body #main #add .container .row .outer .card {
     width: 65vw;

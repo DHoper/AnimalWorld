@@ -91,61 +91,61 @@
   html {
     font-size: 6px !important;
   }
-  body #navbar .logo {
+  html body #navbar .logo {
     width: 9.5rem;
     padding: 1rem;
   }
-  body #navbar button {
+  html body #navbar button {
     width: 9rem;
     height: 7rem;
   }
-  body #navbar button span {
+  html body #navbar button span {
     width: 4rem;
     height: 4rem;
   }
-  body #navbar .active {
+  html body #navbar .active {
     text-decoration: underline;
     text-underline-offset: 1rem;
   }
-  body #navbar .navbar-brand {
+  html body #navbar .navbar-brand {
     font-size: 4.5rem;
   }
-  body #navbar .show {
+  html body #navbar .show {
     display: flex;
     opacity: 1 !important;
   }
-  body #navbar .navbar-collapse {
+  html body #navbar .navbar-collapse {
     opacity: 0;
     height: 7rem;
   }
-  body #navbar .navbar-collapse .nav-L {
+  html body #navbar .navbar-collapse .nav-L {
     flex-direction: row;
     margin-bottom: -1rem;
     margin-left: auto;
     transform: translateX(8%);
   }
-  body #navbar .navbar-collapse .nav-L .home {
+  html body #navbar .navbar-collapse .nav-L .home {
     font-size: 3rem;
   }
-  body #navbar .navbar-collapse .nav-L a {
+  html body #navbar .navbar-collapse .nav-L a {
     margin: 0 3rem;
   }
-  body #navbar .navbar-collapse .nav-R {
+  html body #navbar .navbar-collapse .nav-R {
     position: static;
     margin-bottom: -1rem;
   }
-  body #navbar .navbar-collapse .nav-R a {
+  html body #navbar .navbar-collapse .nav-R a {
     font-size: 1rem;
     margin-right: 1rem;
     margin-left: 3rem;
   }
-  body #navbar a {
+  html body #navbar a {
     font-size: 2.5rem;
   }
-  body #main #index .indexMap .card .outer .img img {
+  html body #main #index .indexMap .card .outer .img img {
     width: 30rem;
   }
-  body #main #wall .row .photoBlock .text .detail {
+  html body #main #wall .row .photoBlock .text .detail {
     position: absolute;
     top: 20%;
     left: 0%;
@@ -157,107 +157,159 @@
     align-items: center;
     width: 100%;
   }
-  body #main #wall .row .photoBlock .text .detail h3 {
+  html body #main #wall .row .photoBlock .text .detail h3 {
     max-width: 80%;
     margin: 0;
     font-size: 2.5rem;
     text-align: center;
     line-height: 3.5rem;
   }
-  body #main #wall .row .photoBlock .text .detail p {
+  html body #main #wall .row .photoBlock .text .detail p {
     display: none;
   }
-  body #main #wall .row .photoBlock .text .line {
+  html body #main #wall .row .photoBlock .text .line {
     display: none;
   }
-  body #main #wall .row .photoBlock .text .button {
+  html body #main #wall .row .photoBlock .text .button {
     display: none;
   }
-  body #main #wall .row .photoBlock .text .arrow {
+  html body #main #wall .row .photoBlock .text .arrow {
     bottom: 0;
     right: 20%;
     width: 60%;
     height: 7rem;
     transform: translateX(-20%);
   }
-  body #main #wall .row .photoBlock .text:hover .arrow {
+  html body #main #wall .row .photoBlock .text:hover .arrow {
     transform: translateX(0%);
   }
-  body #main #wall .row .col-3 {
+  html body #main #wall .row .col-3 {
     width: 50%;
   }
-  body #main #detail {
+  html body #main #detail {
     flex-direction: column;
     flex-wrap: unset;
     padding: 0;
     margin: 0;
+    margin-top: 0;
     height: unset;
   }
-  body #main #detail .col-l {
+  html body #main #detail .col-l {
     width: 100%;
     margin: 0;
   }
-  body #main #detail .col-l .card .card-body h3 {
+  html body #main #detail .col-l .card .card-body {
+    padding: 5rem;
+  }
+  html body #main #detail .col-l .card .card-body h3 {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 7.5rem;
     line-height: 8rem;
   }
-  body #main #detail .col-l .card .card-body p {
-    font-size: 2.5rem;
+  html body #main #detail .col-l .card .card-body p {
+    font-size: 3rem;
     justify-content: center;
     text-align: center;
+    margin-top: 2rem;
   }
-  body #main #detail .col-l .card ul li {
+  html body #main #detail .col-l .card ul li {
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
+    padding: 2rem;
   }
-  body #main #detail .col-l .card .card-footer {
+  html body #main #detail .col-l .card .card-footer {
     display: flex;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
+    padding: 2rem;
   }
-  body #main #detail .col-r {
+  html body #main #detail .col-r {
     width: 100%;
   }
-  body #main #detail .col-r #map {
-    height: 30vh;
+  html body #main #detail .col-r #map {
+    height: 50vh;
     box-shadow: none;
   }
-  body #main #detail .col-r form {
+  html body #main #detail .col-r form {
     margin: 0;
     box-shadow: none;
-  }
-  body #main #detail .col-r form .reviewBottom {
     height: unset;
-    padding: 1rem 0;
   }
-  body #main #detail .col-r form .reviewBottom .starability-basic {
+  html body #main #detail .col-r form .reviewInput {
+    height: 15vh;
+  }
+  html body #main #detail .col-r form .reviewInput textarea {
+    padding: 5rem 7rem;
+    font-size: 3rem;
+  }
+  html body #main #detail .col-r form .reviewBottom {
+    height: unset;
+    padding: 2.2rem;
+  }
+  html body #main #detail .col-r form .reviewBottom .l-container span {
+    font-size: 4.5rem;
+  }
+  html body #main #detail .col-r form .reviewBottom .starability-basic {
     min-height: unset;
     margin-top: -0.8rem !important;
+    transform: scale(0.8) translateY(0%) !important;
+    margin-left: 1.5rem;
   }
-  body #main #detail .col-r .reviews {
+  html body #main #detail .col-r form .reviewBottom button {
+    width: unset !important;
+    font-size: 2.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  html body #main #detail .col-r .reviews {
     margin: 0;
     padding-bottom: 1rem !important;
     height: unset !important;
     font-size: 2.5rem;
   }
-  body #main #detail .col-r .reviews .review .reviewContent {
-    margin-left: 1rem;
+  html body #main #detail .col-r .reviews .review {
+    padding-right: 3.5rem;
   }
-  body #main #add .container .row .outer .card {
+  html body #main #detail .col-r .reviews .review .reviewTitle {
+    padding: 2rem 1rem;
+  }
+  html body #main #detail .col-r .reviews .review .reviewTitle .username {
+    font-size: 2.5rem;
+  }
+  html body #main #detail .col-r .reviews .review .reviewTitle .date {
+    font-size: 2rem;
+  }
+  html body #main #detail .col-r .reviews .review .reviewContent {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 0 2.5rem 5rem;
+    margin-left: 1rem;
+    font-size: 3rem;
+  }
+  html body #main #detail .col-r .reviews .review form button {
+    top: unset;
+    right: unset;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  html body #main #detail .col-r .reviews .review form button span {
+    font-size: 2.5rem;
+  }
+  html body #main #add .container .row .outer .card {
     width: 45vw;
     height: 70vh;
   }
-  body #main #edit .container .row .outer .card {
+  html body #main #edit .container .row .outer .card {
     width: 80vw;
     border: none;
   }
-  body #main #edit .container .row .outer .card h1 {
+  html body #main #edit .container .row .outer .card h1 {
     font-size: 5rem;
   }
-  body #main #edit .container .row .outer .card .delImg .col {
+  html body #main #edit .container .row .outer .card .delImg .col {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -265,23 +317,33 @@
     display: flex;
     justify-content: center;
   }
-  body #main #edit .container .row .outer .card .delImg .col .img-card {
+  html body #main #edit .container .row .outer .card .delImg .col .img-card {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
-  body #main #edit .container .row .outer .card .delImg .col .img-card .card-img {
+  html body #main #edit .container .row .outer .card .delImg .col .img-card .card-img {
     width: 20vw;
     border: none;
   }
-  body #main #edit .container .row .outer .card .delImg .col .img-card .card-img-overlay {
+  html body #main #edit .container .row .outer .card .delImg .col .img-card .card-img-overlay {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
-  body #main #edit .container .row .outer .card .delImg .col .img-card .card-img-overlay input {
+  html body #main #edit .container .row .outer .card .delImg .col .img-card .card-img-overlay input {
     width: 3rem;
     height: 3rem;
+  }
+  html body #footer {
+    padding: 3.5rem;
+  }
+  html body #footer .container {
+    display: flex;
+    justify-content: center;
+  }
+  html body #footer .container span {
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 580px) {
@@ -291,11 +353,17 @@
   body #main #index .indexMap .card {
     padding: 1.4rem 1rem;
   }
+  body #main #index .indexMap .card .outer {
+    flex-direction: column;
+  }
   body #main #index .indexMap .card .outer .content {
-    width: 14rem;
+    width: 100%;
+  }
+  body #main #index .indexMap .card .outer .content .card-body {
+    width: 100%;
   }
   body #main #index .indexMap .card .outer .content .card-body .location {
-    display: none;
+    display: inline;
   }
   body #main #wall {
     flex-direction: column;
@@ -354,15 +422,6 @@
   body #navbar button {
     width: 7rem;
     height: 5rem;
-  }
-  body #main #index .indexMap .card {
-    padding: 0.5rem;
-  }
-  body #main #index .indexMap .card .outer .img img {
-    width: 50rem;
-  }
-  body #main #index .indexMap .card .outer .content {
-    display: none;
   }
   body #main #wall .row {
     width: unset;

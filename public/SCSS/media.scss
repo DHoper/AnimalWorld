@@ -136,268 +136,332 @@
 @media screen and (max-width: 770px) {
     html {
         font-size: 6px !important;
-    }
-    body {
-        #navbar {
-            .logo {
-                width: 9.5rem;
-                padding: 1rem;
-            }
-
-            button {
-                width: 9rem;
-                height: 7rem;
-                span {
-                    width: 4rem;
-                    height: 4rem;
+        body {
+            #navbar {
+                .logo {
+                    width: 9.5rem;
+                    padding: 1rem;
                 }
-            }
-
-            .active {
-                text-decoration: underline;
-                text-underline-offset: 1rem;
-            }
     
-            .navbar-brand {
-                font-size: 4.5rem;//
-            }
-
-            .show {
-                display: flex;
-                opacity: 1!important;
-            }
-
-            .navbar-collapse {//
-                opacity: 0;
-                height: 7rem;
-                .nav-L {//
-                    flex-direction: row;
-                    margin-bottom: -1rem;
-                    margin-left: auto;
-                    transform: translateX(8%);
-                    .home {
-                        font-size: 3rem;//
-                    }
-                    a {
-                        margin: 0 3rem;
+                button {
+                    width: 9rem;
+                    height: 7rem;
+                    span {
+                        width: 4rem;
+                        height: 4rem;
                     }
                 }
     
-                .nav-R {
-                    position: static;
-                    margin-bottom: -1rem;
-                    a {
-                        font-size: 1rem;
-                        margin-right: 1rem;
-                        margin-left: 3rem;
-                    }
+                .active {
+                    text-decoration: underline;
+                    text-underline-offset: 1rem;
                 }
-            }
         
-            a {
-                font-size: 2.5rem;
+                .navbar-brand {
+                    font-size: 4.5rem;//
+                }
+    
+                .show {
+                    display: flex;
+                    opacity: 1!important;
+                }
+    
+                .navbar-collapse {//
+                    opacity: 0;
+                    height: 7rem;
+                    .nav-L {//
+                        flex-direction: row;
+                        margin-bottom: -1rem;
+                        margin-left: auto;
+                        transform: translateX(8%);
+                        .home {
+                            font-size: 3rem;//
+                        }
+                        a {
+                            margin: 0 3rem;
+                        }
+                    }
+        
+                    .nav-R {
+                        position: static;
+                        margin-bottom: -1rem;
+                        a {
+                            font-size: 1rem;
+                            margin-right: 1rem;
+                            margin-left: 3rem;
+                        }
+                    }
+                }
+            
+                a {
+                    font-size: 2.5rem;
+                }
             }
-        }
-
-        #main {
-            #index {
-                .indexMap {
-                    .card {
-                        .outer {
-                            .img {
-                                img {
-                                    width: 30rem;
+    
+            #main {
+                #index {
+                    .indexMap {
+                        .card {
+                            .outer {
+                                .img {
+                                    img {
+                                        width: 30rem;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-
-            #wall {
-                .row {
-                    .photoBlock {
-                        .text {
-                            .detail {
-                                position: absolute;
-                                top: 20%;
-                                left: 0%;
-                                color: #fff;
-                                font-size: 1rem;
-                                margin-bottom: 5rem;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 100%;
-            
-                                h3 {
-                                    max-width: 80%;
-                                    margin:0;
-                                    font-size: 2.5rem;
-                                    text-align: center;
-                                    line-height: 3.5rem;
+    
+                #wall {
+                    .row {
+                        .photoBlock {
+                            .text {
+                                .detail {
+                                    position: absolute;
+                                    top: 20%;
+                                    left: 0%;
+                                    color: #fff;
+                                    font-size: 1rem;
+                                    margin-bottom: 5rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                
+                                    h3 {
+                                        max-width: 80%;
+                                        margin:0;
+                                        font-size: 2.5rem;
+                                        text-align: center;
+                                        line-height: 3.5rem;
+                                    }
+                
+                                    p {
+                                        display: none;
+                                    }
                                 }
-            
-                                p {
+    
+                                .line {
                                     display: none;
                                 }
-                            }
-
-                            .line {
-                                display: none;
-                            }
-            
-                            .button {
-                                display: none;
-                            }
-            
-                            .arrow {
-                                bottom: 0;
-                                right: 20%;
-                                width: 60%;
-                                height: 7rem;
-                                transform: translateX(-20%);
-                            }
-                            &:hover {
+                
+                                .button {
+                                    display: none;
+                                }
+                
                                 .arrow {
-                                    transform: translateX(0%);
+                                    bottom: 0;
+                                    right: 20%;
+                                    width: 60%;
+                                    height: 7rem;
+                                    transform: translateX(-20%);
+                                }
+                                &:hover {
+                                    .arrow {
+                                        transform: translateX(0%);
+                                    }
                                 }
                             }
                         }
-                    }
-
-                    .col-3 {
-                        width: 50%;
-                    }
     
+                        .col-3 {
+                            width: 50%;
+                        }
+        
+                    }
                 }
-            }
-
-            #detail {
-                flex-direction: column;
-                flex-wrap: unset;
-                padding: 0;
-                margin: 0;
-                height: unset;
-
-                .col-l {
-                    width: 100%;
+    
+                #detail {
+                    flex-direction: column;
+                    flex-wrap: unset;
+                    padding: 0;
                     margin: 0;
-                    .card {
-                        .card-body {
-                            h3 {
-                                text-align: center;
-                                font-size: 4.5rem;
-                                line-height: 8rem;
-                            }
-                            p {
-                               font-size: 2.5rem;
-                               justify-content: center;
-                               text-align: center;
-                            }
-                        }
-                        ul {
-                            li {
-                                justify-content: center;
-                                font-size: 2.5rem;
-                                text-align: center;
-                            }
-                        }
-                        .card-footer {
-                            display: flex;
-                            justify-content: center;
-                            font-size: 2.5rem;
-                            text-align: center;
-                        }
-                    }
-                }
-                .col-r {
-                    width: 100%;
-                    #map {
-                        height: 30vh;
-                        box-shadow: none;
-                    }
-                    form {
+                    margin-top: 0;
+                    height: unset;
+    
+                    .col-l {
+                        width: 100%;
                         margin: 0;
-                        box-shadow: none;
-                        .reviewBottom {
-                            height: unset;
-                            padding: 1rem 0;
-                            .starability-basic {
-                                min-height: unset;
-                                margin-top: -.8rem !important;
-                            }
-                        }
-                    }
-                    .reviews {
-                        margin: 0;
-                        padding-bottom: 1rem!important;
-                        height: unset!important;
-                        font-size: 2.5rem;
-                        .review {
-                            .reviewContent {
-                                margin-left: 1rem;
-                            }
-                        }
-                    }
-                }
-            }
-
-            #add {
-                .container {
-                    .row {
-                        .outer {
-                            .card {
-                                width: 45vw;
-                                height: 70vh;
-                            }  
-                        }
-                    }
-                } 
-            }
-
-            #edit {
-                .container {
-                    .row {
-                        .outer {
-                            .card {
-                                width: 80vw;
-                                border: none;
-
-                                h1 {
-                                    font-size: 5rem;
+                        .card {
+                            .card-body {
+                                padding: 5rem;
+                                h3 {
+                                    text-align: center;
+                                    font-size: 7.5rem;
+                                    line-height: 8rem;
                                 }
-                    
-                                .delImg {
-                                    .col {
-                                        width: max-content;
-                                        margin-bottom: 2rem;
-                                        display: flex;
-                                        justify-content: center;
-                                        .img-card {
-                                            width: max-content;
-                                            .card-img {
-                                                width: 20vw;
-                                                border: none;
-                                            }
-                                            .card-img-overlay {
-                                                width: max-content;
+                                p {
+                                   font-size: 3rem;
+                                   justify-content: center;
+                                   text-align: center;
+                                   margin-top: 2rem;
+                                }
+                            }
+                            ul {
+                                li {
+                                    justify-content: center;
+                                    font-size: 3rem;
+                                    text-align: center;
+                                    padding: 2rem;
+                                }
+                            }
+                            .card-footer {
+                                display: flex;
+                                justify-content: center;
+                                font-size: 3rem;
+                                text-align: center;
+                                padding: 2rem;
+                            }
+                        }
+                    }
+                    .col-r {
+                        width: 100%;
+                        #map {
+                            height: 50vh;
+                            box-shadow: none;
+                        }
+                        form {
+                            margin: 0;
+                            box-shadow: none;
+                            height: unset;
+                            .reviewInput {
+                                height: 15vh;
+                                textarea {
+                                    padding: 5rem 7rem;
+                                    font-size: 3rem;
+                                }
+                            }
+                            .reviewBottom {
+                                height: unset;
+                                padding: 2.2rem;
 
-                                                input {
-                                                    width: 3rem;
-                                                    height:3rem;
+                                .l-container {
+                                    span {
+                                        font-size: 4.5rem;
+                                    }
+                                }
+                                .starability-basic {
+                                    min-height: unset;
+                                    margin-top: -.8rem !important;
+                                    transform: scale(0.8) translateY(0%) !important;
+                                    margin-left: 1.5rem;
+                                }
+
+                                button {
+                                    width: unset !important;
+                                    font-size: 2.5rem;
+                                    border-radius: 1rem;
+                                    padding: 1rem;
+                                }
+                            }
+                        }
+                        .reviews {
+                            margin: 0;
+                            padding-bottom: 1rem!important;
+                            height: unset!important;
+                            font-size: 2.5rem;
+                            .review {
+                                padding-right: 3.5rem;
+                                .reviewTitle {
+                                    padding: 2rem 1rem;
+                                    .username {
+                                        font-size: 2.5rem;
+                                    }
+                                    .date {
+                                        font-size: 2rem;
+                                    }
+                                }
+                                .reviewContent {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 2.5rem 0 2.5rem 5rem ;
+                                    margin-left: 1rem;
+                                    font-size: 3rem;
+                                }
+                                form {
+                                    button {
+                                        top: unset;
+                                        right: unset;
+                                        border-radius: 1rem;
+                                        padding: 2rem;
+                                        span {
+                                            font-size: 2.5rem;
+                                        }
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                #add {
+                    .container {
+                        .row {
+                            .outer {
+                                .card {
+                                    width: 45vw;
+                                    height: 70vh;
+                                }  
+                            }
+                        }
+                    } 
+                }
+    
+                #edit {
+                    .container {
+                        .row {
+                            .outer {
+                                .card {
+                                    width: 80vw;
+                                    border: none;
+    
+                                    h1 {
+                                        font-size: 5rem;
+                                    }
+                        
+                                    .delImg {
+                                        .col {
+                                            width: max-content;
+                                            margin-bottom: 2rem;
+                                            display: flex;
+                                            justify-content: center;
+                                            .img-card {
+                                                width: max-content;
+                                                .card-img {
+                                                    width: 20vw;
+                                                    border: none;
+                                                }
+                                                .card-img-overlay {
+                                                    width: max-content;
+    
+                                                    input {
+                                                        width: 3rem;
+                                                        height:3rem;
+                                                    }
                                                 }
                                             }
                                         }
                                     }
-                                }
-                            }  
+                                }  
+                            }
                         }
-                    }
-                } 
+                    } 
+                }
             }
+
+            #footer {
+                padding: 3.5rem;
+                .container {
+                    display: flex;
+                    justify-content: center;
+                    span {
+                        font-size: 3rem;
+                    }
+                }
+            }   
         }
-      
     }
 }
 
@@ -406,23 +470,19 @@
         font-size: 6px !important;
     }
     body {
-        .nav-L {
-            // margin-left: 19% !important;
-        }
-
         #main {
-
             #index {
                 .indexMap {
                     .card {
                         padding: 1.4rem 1rem;
                         .outer {
+                            flex-direction: column ;
                             .content {
-                                width: 14rem;
+                                width: 100%;
                                 .card-body {
-                                    
+                                    width: 100%;
                                     .location {
-                                        display: none;
+                                        display: inline;
                                     }
                                 }
                             }
@@ -510,24 +570,6 @@
             }
         }
         #main {
-            #index {
-                .indexMap {
-                    .card {
-                        padding: .5rem;
-                        .outer {
-                            .img {
-                                img {
-                                    width: 50rem;
-                                }
-                            }
-                            .content {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-
             #wall {
                 .row {
                     width: unset;
